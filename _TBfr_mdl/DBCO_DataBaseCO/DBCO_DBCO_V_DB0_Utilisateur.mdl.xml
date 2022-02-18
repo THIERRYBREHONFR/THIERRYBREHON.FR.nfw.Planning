@@ -1,0 +1,24 @@
+<Modele>
+  <InitialCatalog>CO</InitialCatalog>
+  <AllColumns>Checked</AllColumns>
+  <ApplicationCode>DBCO</ApplicationCode>
+  <NameSpace>DataBaseCO</NameSpace>
+  <ViewName>V_DB0_Utilisateur</ViewName>
+  <ObjectName>DBCO_V_DB0_Utilisateur</ObjectName>
+  <ObjectUpdateName>
+  </ObjectUpdateName>
+  <CentralObjectName>
+  </CentralObjectName>
+  <UpdateColumnsCount>6</UpdateColumnsCount>
+  <IdChoix>Id</IdChoix>
+  <LibelleChoix>
+  </LibelleChoix>
+  <Columns>
+    <Id>True</Id>
+    <Logicaldeleted>True</Logicaldeleted>
+    <Co_visu>True</Co_visu>
+    <Co_modif>True</Co_modif>
+    <Identite>True</Identite>
+    <Id_espaceclient>True</Id_espaceclient>
+  </Columns>
+</Modele>

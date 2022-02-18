@@ -1,0 +1,34 @@
+<Modele>
+  <InitialCatalog>PL</InitialCatalog>
+  <AllColumns>Checked</AllColumns>
+  <ApplicationCode>PL</ApplicationCode>
+  <NameSpace>Planning</NameSpace>
+  <ViewName>V_PL0_Realisation</ViewName>
+  <ObjectName>PL_V_PL0_Realisation</ObjectName>
+  <ObjectUpdateName>
+  </ObjectUpdateName>
+  <CentralObjectName>DBPL_V_DB0_Realisation</CentralObjectName>
+  <UpdateColumnsCount>8</UpdateColumnsCount>
+  <IdChoix>Id</IdChoix>
+  <LibelleChoix>Libelle</LibelleChoix>
+  <Columns>
+    <Id>True</Id>
+    <Debut>True</Debut>
+    <Id_employe>True</Id_employe>
+    <Duree>True</Duree>
+    <Logicaldeleted>True</Logicaldeleted>
+    <Id_espaceclient>True</Id_espaceclient>
+    <Id_contrainterealisee>True</Id_contrainterealisee>
+    <Id_contrainte>True</Id_contrainte>
+    <Id_planning>True</Id_planning>
+    <Ref>True</Ref>
+    <Abreviation>True</Abreviation>
+    <Libelle>True</Libelle>
+    <Commentaire>True</Commentaire>
+    <Id_typecontrainte>True</Id_typecontrainte>
+    <Realisee>True</Realisee>
+    <Lib_typecontrainte>True</Lib_typecontrainte>
+    <Abr_planning>True</Abr_planning>
+    <Lib_planning>True</Lib_planning>
+  </Columns>
+</Modele>

@@ -1,0 +1,34 @@
+<Modele>
+  <InitialCatalog>PL</InitialCatalog>
+  <AllColumns>Checked</AllColumns>
+  <ApplicationCode>PL</ApplicationCode>
+  <NameSpace>Planning</NameSpace>
+  <ViewName>V_PL0_CategorieContrainte</ViewName>
+  <ObjectName>PL_V_PL0_CategorieContrainte</ObjectName>
+  <ObjectUpdateName>
+  </ObjectUpdateName>
+  <CentralObjectName>DBPL_V_DB0_CategorieContrainte</CentralObjectName>
+  <UpdateColumnsCount>5</UpdateColumnsCount>
+  <IdChoix>Id</IdChoix>
+  <LibelleChoix>
+  </LibelleChoix>
+  <Columns>
+    <Id>True</Id>
+    <Logicaldeleted>True</Logicaldeleted>
+    <Id_espaceclient>True</Id_espaceclient>
+    <Id_categorie>True</Id_categorie>
+    <Id_contrainte>True</Id_contrainte>
+    <Lib_categorie>True</Lib_categorie>
+    <Lib_typecategorie>True</Lib_typecategorie>
+    <Id_planning>True</Id_planning>
+    <Lib_planning>True</Lib_planning>
+    <Abr_planning>True</Abr_planning>
+    <Ref_contrainte>True</Ref_contrainte>
+    <Lib_contrainte>True</Lib_contrainte>
+    <Comm_contrainte>True</Comm_contrainte>
+    <Id_typecontrainte>True</Id_typecontrainte>
+    <Abr_contrainte>True</Abr_contrainte>
+    <Contrainterealisee>True</Contrainterealisee>
+    <Lib_typecontrainte>True</Lib_typecontrainte>
+  </Columns>
+</Modele>

@@ -1,0 +1,27 @@
+<Modele>
+  <InitialCatalog>PL</InitialCatalog>
+  <AllColumns>Checked</AllColumns>
+  <ApplicationCode>DBPL</ApplicationCode>
+  <NameSpace>DataBasePL</NameSpace>
+  <ViewName>V_DB0_Employe</ViewName>
+  <ObjectName>DBPL_V_DB0_Employe</ObjectName>
+  <ObjectUpdateName>
+  </ObjectUpdateName>
+  <CentralObjectName>
+  </CentralObjectName>
+  <UpdateColumnsCount>9</UpdateColumnsCount>
+  <IdChoix>Id</IdChoix>
+  <LibelleChoix>
+  </LibelleChoix>
+  <Columns>
+    <Id>True</Id>
+    <Logicaldeleted>True</Logicaldeleted>
+    <Initiales>True</Initiales>
+    <Id_planning>True</Id_planning>
+    <Id_espaceclient>True</Id_espaceclient>
+    <Nom>True</Nom>
+    <Prenom>True</Prenom>
+    <Feminin>True</Feminin>
+    <Id_utilisateur>True</Id_utilisateur>
+  </Columns>
+</Modele>

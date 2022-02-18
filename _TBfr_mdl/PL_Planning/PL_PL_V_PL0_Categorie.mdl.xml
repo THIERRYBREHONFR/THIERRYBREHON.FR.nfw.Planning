@@ -1,0 +1,28 @@
+<Modele>
+  <InitialCatalog>PL</InitialCatalog>
+  <AllColumns>Checked</AllColumns>
+  <ApplicationCode>PL</ApplicationCode>
+  <NameSpace>Planning</NameSpace>
+  <ViewName>V_PL0_Categorie</ViewName>
+  <ObjectName>PL_V_PL0_Categorie</ObjectName>
+  <ObjectUpdateName>
+  </ObjectUpdateName>
+  <CentralObjectName>DBPL_V_DB0_Categorie</CentralObjectName>
+  <UpdateColumnsCount>7</UpdateColumnsCount>
+  <IdChoix>Id</IdChoix>
+  <LibelleChoix>Libelle</LibelleChoix>
+  <Columns>
+    <Id>True</Id>
+    <Logicaldeleted>True</Logicaldeleted>
+    <Id_espaceclient>True</Id_espaceclient>
+    <Id_typecategorie>True</Id_typecategorie>
+    <Id_mere>True</Id_mere>
+    <Libelle>True</Libelle>
+    <Ordreaff>True</Ordreaff>
+    <Id_planning>True</Id_planning>
+    <Lib_typecategorie>True</Lib_typecategorie>
+    <Lib_planning>True</Lib_planning>
+    <Abr_planning>True</Abr_planning>
+    <Lib_mere>True</Lib_mere>
+  </Columns>
+</Modele>

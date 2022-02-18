@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{658E433B-916A-4865-A4D6-37DB898D3438}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataBasePL.NSB</RootNamespace>
+    <AssemblyName>DataBasePL.NSB.nfw</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>nfw\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NFW</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>nfw\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NFW</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BDBPL_V_DB0_CategorieContrainte_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_Categorie_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_Contrainte_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_Employe_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_EquipeEmployeVersion_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_Equipe_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_Planning_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_Realisation_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_TypeCategorie_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_TypeTache_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_Utilisateur_gen.cs" />
+    <Compile Include="BDBPL_V_DB0_Version_gen.cs" />
+    <Compile Include="Properties\AssemblyInfo.nfw.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBPL_DataBasePL.NSD\DB_DataBasePL.NSD.nfw.csproj">
+      <Project>{0f2ddd54-a46a-4efa-a20d-50dd7e83e7da}</Project>
+      <Name>DB_DataBasePL.NSD.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\DBPL_DataBasePL.NSR\DB_DataBasePL.NSR.nfw.csproj">
+      <Project>{8d7e139a-974b-4ff8-aacb-3721cb428ad8}</Project>
+      <Name>DB_DataBasePL.NSR.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\DBPL_DataBasePL.NSS\DB_DataBasePL.NSS.nfw.csproj">
+      <Project>{1b376fc5-7979-4ace-9873-6cb1d046ff90}</Project>
+      <Name>DB_DataBasePL.NSS.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Business\THIERRYBREHON.FR.NSB\THIERRYBREHON.FR.NSB.nfw.csproj">
+      <Project>{f6674262-6f68-4e5b-b98e-2046996fb3c9}</Project>
+      <Name>THIERRYBREHON.FR.NSB.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Data\THIERRYBREHON.FR.NSD\THIERRYBREHON.FR.NSD.nfw.csproj">
+      <Project>{d69a5d34-4801-4b71-9894-2a5baf7106dc}</Project>
+      <Name>THIERRYBREHON.FR.NSD.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Sql\THIERRYBREHON.FR.NSS\THIERRYBREHON.FR.NSS.nfw.csproj">
+      <Project>{bffc1dbc-8786-4c6c-939f-341fdf249cea}</Project>
+      <Name>THIERRYBREHON.FR.NSS.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Essentiels\THIERRYBREHON.FR.NSR\THIERRYBREHON.FR.NSR.nfw.csproj">
+      <Project>{7a7f359e-2622-4116-9986-81e3e0df44c5}</Project>
+      <Name>THIERRYBREHON.FR.NSR.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Essentiels\THIERRYBREHON.FR.X\THIERRYBREHON.FR.X.nfw.csproj">
+      <Project>{01ff894b-c015-4319-9515-aafa481d5c86}</Project>
+      <Name>THIERRYBREHON.FR.X.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

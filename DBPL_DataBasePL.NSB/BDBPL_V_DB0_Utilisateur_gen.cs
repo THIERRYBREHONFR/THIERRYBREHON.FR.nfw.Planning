@@ -1,0 +1,92 @@
+﻿// Généré par GENERATEUR.THIERRYBREHON.FR le 03/01/2022 14:35:31
+using System;
+using System.Collections.Generic;
+using System.Data;
+using THIERRYBREHON.FR.NSD;
+using THIERRYBREHON.FR.NSS;
+using THIERRYBREHON.FR.NSB;
+using DataBasePL.NSD;
+using DataBasePL.NSS;
+namespace DataBasePL.NSB
+
+{
+    public class BDBPL_V_DB0_Utilisateur_generated : TBfrBusiness_ListWithUpdate
+    {
+        #region object itself
+
+        public BDBPL_V_DB0_Utilisateur_generated(ITBfrStorageAccess iStorageAccess) : base(iStorageAccess, false, true)
+        { for (int vIChild = 0; vIChild < DDBPL_V_DB0_Utilisateur.C_UpdateColumnsCount + DDBPL_V_DB0_Utilisateur.C_AdditionalColumnsCount; vIChild++) new TBfrBusiness().Parent = this; }
+
+        public override ITBfrBusiness NewITBfrBusiness() => new BDBPL_V_DB0_Utilisateur_generated(IStorageAccess);
+
+        #endregion
+
+        #region associated objects
+        
+        public override ITBfrData NewITBfrData(TBfrData_Type type, bool withChildren) => new DDBPL_V_DB0_Utilisateur(type, withChildren); 
+
+        public override ITBfrStorageView NewITBfrStorage() => new SDBPL_V_DB0_Utilisateur(IStorageAccess);
+		
+        #endregion
+    
+        protected override void ExceptOnIDataNotInterpretable(ITBfrData data) { if (!(data is DDBPL_V_DB0_Utilisateur)) base.ExceptOnIDataNotInterpretable(null); }
+
+        #region Children
+        
+       public override TBfrBusiness BId => (TBfrBusiness)this[DDBPL_V_DB0_Utilisateur.C_Id]; // 0 Id long
+
+       public TBfrBusiness BLogicaldeleted => (TBfrBusiness)this[DDBPL_V_DB0_Utilisateur.C_Logicaldeleted]; // 1 Logicaldeleted bool
+
+       public TBfrBusiness BModif => (TBfrBusiness)this[DDBPL_V_DB0_Utilisateur.C_Modif]; // 2 Modif bool
+
+       public TBfrBusiness BId_espaceclient => (TBfrBusiness)this[DDBPL_V_DB0_Utilisateur.C_Id_espaceclient]; // 3 Id_espaceclient long
+
+       public TBfrBusiness BNom => (TBfrBusiness)this[DDBPL_V_DB0_Utilisateur.C_Nom]; // 4 Nom string
+
+       public TBfrBusiness BPrenom => (TBfrBusiness)this[DDBPL_V_DB0_Utilisateur.C_Prenom]; // 5 Prenom string
+
+       public TBfrBusiness BFeminin => (TBfrBusiness)this[DDBPL_V_DB0_Utilisateur.C_Feminin]; // 6 Feminin bool
+
+      
+        #endregion
+
+	}
+	
+    public class BDBPL_V_DB0_Utilisateur_List_generated : TBfrBusiness_ListWithUpdate
+    {
+        #region object itself
+
+        public BDBPL_V_DB0_Utilisateur_List_generated(ITBfrStorageAccess iStorageAccess) : base(iStorageAccess, true, false) => new BDBPL_V_DB0_Utilisateur(iStorageAccess).Parent = this;
+
+        public override ITBfrBusiness NewITBfrBusiness() => new BDBPL_V_DB0_Utilisateur_List_generated(IStorageAccess);
+
+        #endregion
+
+    }
+
+    public partial class BDBPL_V_DB0_Utilisateur : BDBPL_V_DB0_Utilisateur_generated
+    {
+        #region object itself
+
+        public BDBPL_V_DB0_Utilisateur(ITBfrStorageAccess iStorageAccess) : base(iStorageAccess) { }
+
+        public override ITBfrBusiness NewITBfrBusiness() => new BDBPL_V_DB0_Utilisateur(IStorageAccess);
+
+        #endregion
+
+    }
+
+    public partial class BDBPL_V_DB0_Utilisateur_List : BDBPL_V_DB0_Utilisateur_List_generated
+    {
+        #region object itself
+
+        public BDBPL_V_DB0_Utilisateur_List(ITBfrStorageAccess iStorageAccess) : base(iStorageAccess) { }
+
+        public override ITBfrBusiness NewITBfrBusiness() => new BDBPL_V_DB0_Utilisateur_generated(IStorageAccess);
+
+        #endregion
+
+    }
+
+
+}

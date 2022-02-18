@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A26D9D9B-0BF9-4DC2-ADB8-D1AD86B484D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Planning.NSB</RootNamespace>
+    <AssemblyName>Planning.NSB.nfw</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>nfw\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NFW</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>nfw\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NFW</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BPL_V_PL0_CategorieContrainte_gen.cs" />
+    <Compile Include="BPL_V_PL0_Categorie_gen.cs" />
+    <Compile Include="BPL_V_PL0_Contrainte_gen.cs" />
+    <Compile Include="BPL_V_PL0_Employe_gen.cs" />
+    <Compile Include="BPL_V_PL0_EquipeEmployeVersion_gen.cs" />
+    <Compile Include="BPL_V_PL0_Equipe_gen.cs" />
+    <Compile Include="BPL_V_PL0_Planning_gen.cs" />
+    <Compile Include="BPL_V_PL0_Realisation_gen.cs" />
+    <Compile Include="BPL_V_PL0_TypeCategorie_gen.cs" />
+    <Compile Include="BPL_V_PL0_TypeTache_gen.cs" />
+    <Compile Include="BPL_V_PL0_Utilisateur_gen.cs" />
+    <Compile Include="BPL_V_PL0_Version_gen.cs" />
+    <Compile Include="BPL_V_PL9_Droits_gen.cs" />
+    <Compile Include="Properties\AssemblyInfo.nfw.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBPL_DataBasePL.NSB\DB_DataBasePL.NSB.nfw.csproj">
+      <Project>{658e433b-916a-4865-a4d6-37db898d3438}</Project>
+      <Name>DB_DataBasePL.NSB.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PL_Planning.NSD\PL_Planning.NSD.nfw.csproj">
+      <Project>{51cfb881-54d0-4938-b835-422c81ddfe58}</Project>
+      <Name>PL_Planning.NSD.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PL_Planning.NSR\PL_Planning.NSR.nfw.csproj">
+      <Project>{39eb1621-25d3-4801-a8ff-20a914174bd9}</Project>
+      <Name>PL_Planning.NSR.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PL_Planning.NSS\PL_Planning.NSS.nfw.csproj">
+      <Project>{5c76b098-4d63-4498-a58c-2201cc6cbb40}</Project>
+      <Name>PL_Planning.NSS.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Business\THIERRYBREHON.FR.NSB\THIERRYBREHON.FR.NSB.nfw.csproj">
+      <Project>{f6674262-6f68-4e5b-b98e-2046996fb3c9}</Project>
+      <Name>THIERRYBREHON.FR.NSB.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Data\THIERRYBREHON.FR.NSD\THIERRYBREHON.FR.NSD.nfw.csproj">
+      <Project>{d69a5d34-4801-4b71-9894-2a5baf7106dc}</Project>
+      <Name>THIERRYBREHON.FR.NSD.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Sql\THIERRYBREHON.FR.NSS\THIERRYBREHON.FR.NSS.nfw.csproj">
+      <Project>{bffc1dbc-8786-4c6c-939f-341fdf249cea}</Project>
+      <Name>THIERRYBREHON.FR.NSS.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Essentiels\THIERRYBREHON.FR.NSR\THIERRYBREHON.FR.NSR.nfw.csproj">
+      <Project>{7a7f359e-2622-4116-9986-81e3e0df44c5}</Project>
+      <Name>THIERRYBREHON.FR.NSR.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Essentiels\THIERRYBREHON.FR.X.MSSQL\THIERRYBREHON.FR.X.MSSQL.nfw.csproj">
+      <Project>{3f521a2d-5aa9-4cf4-81ff-84db06957154}</Project>
+      <Name>THIERRYBREHON.FR.X.MSSQL.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Essentiels\THIERRYBREHON.FR.X\THIERRYBREHON.FR.X.nfw.csproj">
+      <Project>{01ff894b-c015-4319-9515-aafa481d5c86}</Project>
+      <Name>THIERRYBREHON.FR.X.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Thierry\ET_Thierry.NSS\ET_Thierry.NSS.nfw.csproj">
+      <Project>{6DCAD0D9-5901-4371-BE93-11C4190434E9}</Project>
+      <Name>ET_Thierry.NSS.nfw</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,33 @@
+<Modele>
+  <InitialCatalog>CO</InitialCatalog>
+  <AllColumns>Checked</AllColumns>
+  <ApplicationCode>CO</ApplicationCode>
+  <NameSpace>Copropriete</NameSpace>
+  <ViewName>V_CO0_LotCopro</ViewName>
+  <ObjectName>CO_V_CO0_LotCopro</ObjectName>
+  <ObjectUpdateName>
+  </ObjectUpdateName>
+  <CentralObjectName>DBCO_V_DB0_Lotcopro</CentralObjectName>
+  <UpdateColumnsCount>7</UpdateColumnsCount>
+  <IdChoix>Id</IdChoix>
+  <LibelleChoix>
+  </LibelleChoix>
+  <Columns>
+    <Id>True</Id>
+    <Logicaldeleted>True</Logicaldeleted>
+    <Id_coproprietaire>True</Id_coproprietaire>
+    <Id_lot>True</Id_lot>
+    <Achat>True</Achat>
+    <Vente>True</Vente>
+    <Id_espaceclient>True</Id_espaceclient>
+    <Identite>True</Identite>
+    <Nocopro>True</Nocopro>
+    <Nolot>True</Nolot>
+    <Lib_batiment>True</Lib_batiment>
+    <Etage>True</Etage>
+    <Lib_position>True</Lib_position>
+    <Lib_typelot>True</Lib_typelot>
+    <Lib_abc>True</Lib_abc>
+    <Lib_nbrepieces>True</Lib_nbrepieces>
+  </Columns>
+</Modele>

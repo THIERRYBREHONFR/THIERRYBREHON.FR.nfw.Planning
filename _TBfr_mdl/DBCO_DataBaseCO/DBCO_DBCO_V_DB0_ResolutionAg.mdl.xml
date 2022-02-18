@@ -1,0 +1,31 @@
+<Modele>
+  <InitialCatalog>CO</InitialCatalog>
+  <AllColumns>Checked</AllColumns>
+  <ApplicationCode>DBCO</ApplicationCode>
+  <NameSpace>DataBaseCO</NameSpace>
+  <ViewName>V_DB0_ResolutionAg</ViewName>
+  <ObjectName>DBCO_V_DB0_ResolutionAg</ObjectName>
+  <ObjectUpdateName>
+  </ObjectUpdateName>
+  <CentralObjectName>
+  </CentralObjectName>
+  <UpdateColumnsCount>13</UpdateColumnsCount>
+  <IdChoix>Id</IdChoix>
+  <LibelleChoix>
+  </LibelleChoix>
+  <Columns>
+    <Id>True</Id>
+    <Logicaldeleted>True</Logicaldeleted>
+    <Id_ag>True</Id_ag>
+    <Numero>True</Numero>
+    <Libelle>True</Libelle>
+    <Id_basetantiemes>True</Id_basetantiemes>
+    <Pour>True</Pour>
+    <Contre>True</Contre>
+    <Abstention>True</Abstention>
+    <Id_artmaj>True</Id_artmaj>
+    <Adopte>True</Adopte>
+    <Id_typeresolution>True</Id_typeresolution>
+    <Id_espaceclient>True</Id_espaceclient>
+  </Columns>
+</Modele>
