@@ -94,7 +94,7 @@ namespace DataBasePL.NSS
                 IStorageAccess.Validate();
                 return vResult;
             }
-            catch (Exception e) { IStorageAccess.Cancel(); throw e; }
+            catch (Exception) { IStorageAccess.Cancel(); throw; }
         }
         
         public virtual int NeutralizationId_planning(long Id)
@@ -107,7 +107,7 @@ namespace DataBasePL.NSS
                 IStorageAccess.Validate();
                 return vResult;
             }
-            catch (Exception e) { IStorageAccess.Cancel(); throw e; }
+            catch (Exception) { IStorageAccess.Cancel(); throw; }
         }
 
         #endregion
@@ -129,7 +129,7 @@ namespace DataBasePL.NSS
                 IStorageAccess.Validate();
                 return vResult;
             }
-            catch (Exception e) { IStorageAccess.Cancel(); throw e; }
+            catch (Exception) { IStorageAccess.Cancel(); throw; }
         }
         
         public virtual int NeutralizationId_utilisateur(long Id)
@@ -142,7 +142,7 @@ namespace DataBasePL.NSS
                 IStorageAccess.Validate();
                 return vResult;
             }
-            catch (Exception e) { IStorageAccess.Cancel(); throw e; }
+            catch (Exception) { IStorageAccess.Cancel(); throw; }
         }
 
         #endregion

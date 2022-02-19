@@ -55,7 +55,7 @@ namespace DataBasePL.NSS
                 bMaj += base.Merge(oldId, newId);
                 IStorageAccess.Validate();
             }
-            catch (Exception e) { IStorageAccess.Cancel(); throw e; }
+            catch (Exception) { IStorageAccess.Cancel(); throw; }
             return bMaj;
         }
 
@@ -72,7 +72,7 @@ namespace DataBasePL.NSS
                 bMaj += base.Delete(id);
                 IStorageAccess.Validate();
             }
-            catch (Exception e) { IStorageAccess.Cancel(); throw e; }
+            catch (Exception) { IStorageAccess.Cancel(); throw; }
             return bMaj;
         }
 
@@ -88,7 +88,7 @@ namespace DataBasePL.NSS
 
                 IStorageAccess.Validate();
             }
-            catch (Exception e) { IStorageAccess.Cancel(); throw e; }
+            catch (Exception) { IStorageAccess.Cancel(); throw; }
             return bMaj;
         }
 

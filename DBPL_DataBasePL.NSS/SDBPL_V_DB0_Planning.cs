@@ -71,10 +71,10 @@ namespace DataBasePL.NSS
                 IStorageAccess.Validate();
 
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 IStorageAccess.Cancel();
-                throw e;
+                throw;
             }
             return bMaj;
         }
@@ -101,10 +101,10 @@ namespace DataBasePL.NSS
                 bMaj += base.Delete(id);
                 IStorageAccess.Validate();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 IStorageAccess.Cancel();
-                throw e;
+                throw;
             }
             return bMaj;
         }
@@ -130,10 +130,10 @@ namespace DataBasePL.NSS
 
                 IStorageAccess.Validate();
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 IStorageAccess.Cancel();
-                throw e;
+                throw;
             }
             return bMaj;
         }
