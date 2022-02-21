@@ -13,6 +13,7 @@
   <IdChoix>Id</IdChoix>
   <LibelleChoix>
   </LibelleChoix>
+  <PathSolution>D:\github\THIERRYBREHON.FR\THIERRYBREHON.FR.nfw.Planning\</PathSolution>
   <Columns>
     <Id>True</Id>
     <Debut>True</Debut>

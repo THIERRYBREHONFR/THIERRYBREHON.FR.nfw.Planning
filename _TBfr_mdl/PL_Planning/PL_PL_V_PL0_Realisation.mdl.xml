@@ -11,6 +11,7 @@
   <UpdateColumnsCount>8</UpdateColumnsCount>
   <IdChoix>Id</IdChoix>
   <LibelleChoix>Libelle</LibelleChoix>
+  <PathSolution>D:\github\THIERRYBREHON.FR\THIERRYBREHON.FR.nfw.Planning\</PathSolution>
   <Columns>
     <Id>True</Id>
     <Debut>True</Debut>

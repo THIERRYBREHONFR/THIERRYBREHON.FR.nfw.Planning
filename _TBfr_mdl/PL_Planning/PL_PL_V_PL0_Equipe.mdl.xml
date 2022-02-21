@@ -11,6 +11,7 @@
   <UpdateColumnsCount>6</UpdateColumnsCount>
   <IdChoix>Id</IdChoix>
   <LibelleChoix>Lib_planning_equipe</LibelleChoix>
+  <PathSolution>D:\github\THIERRYBREHON.FR\THIERRYBREHON.FR.nfw.Planning\</PathSolution>
   <Columns>
     <Id>True</Id>
     <Logicaldeleted>True</Logicaldeleted>
