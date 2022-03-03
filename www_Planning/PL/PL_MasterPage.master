@@ -1,7 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PL_MasterPage.master.cs"
     Inherits="PL_MasterPage" %>
 
-<%@ Register Assembly="THIERRYBREHON.FR.Components.nfw" Namespace="THIERRYBREHON.FR.Components" TagPrefix="cc2" %>
 <%@ Register Assembly="THIERRYBREHON.FR.Web.nfw" Namespace="THIERRYBREHON.FR.Web" TagPrefix="TBfr" %>
 <%@ Register Assembly="Planning.NSP.nfw" Namespace="Planning.NSP" TagPrefix="TBfr" %>
 <!DOCTYPE html>

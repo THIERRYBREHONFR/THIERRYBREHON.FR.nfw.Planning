@@ -61,6 +61,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www_Planning", "www_Planning\", "{02651746-F1ED-46C7-AF8C-15FFC3B7ABF1}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		ProjectReferences = "{45f03b92-c168-40df-af67-5ec08cb98a45}|DataBasePL.NSB.nfw.dll;{76dbecf9-b7a1-4d0d-9cf2-370a32fb5d69}|DataBasePL.NSD.nfw.dll;{69ee9a5c-80ba-4786-84e1-be764ceb8b88}|DataBasePL.NSR.nfw.dll;{abf86b72-15c8-4328-aa4c-f603d0170f16}|DataBasePL.NSS.nfw.dll;{ffc25611-1ab6-49e6-a694-60f55c0f7878}|Thierry.NSB.nfw.dll;{3ff1a155-5e4f-4f82-bfd0-cf2412125bc6}|Thierry.NSD.nfw.dll;{08d08f1f-3548-430f-abaf-6ac644d292b5}|Thierry.NSP.nfw.dll;{12c4a928-b5ee-43c3-b592-c9f228fc5752}|Thierry.NSR.nfw.dll;{bf47fd09-88dd-4d25-b976-0d4af947d185}|Thierry.NSS.nfw.dll;{da5c4c61-94bc-400a-ac9e-ca1bc5b8c3d1}|Planning.NSB.nfw.dll;{f533f844-b404-425d-bba8-1296c75bdd81}|Planning.NSD.nfw.dll;{9bf61616-6d65-4409-90f4-fa977e25b2b7}|Planning.NSP.nfw.dll;{3b22a48b-06e3-4d30-a68c-2d0c5df51397}|Planning.NSR.nfw.dll;{ed60ca7f-1c3c-4717-b335-e8c5986dcada}|Planning.NSS.nfw.dll;{9ffdc593-b728-4fe1-b3b0-5c74b4d1a46f}|THIERRYBREHON.FR.ImpExp.nfw.dll;{4d53e6c2-335e-4f35-8a3a-162eb3a35bc9}|THIERRYBREHON.FR.SERVICE.NSB.nfw.dll;{2a79af8c-18fe-4151-ac04-32dbb19e503e}|THIERRYBREHON.FR.SERVICE.NSD.nfw.dll;{baebb814-41e0-4c7c-94e6-f9a5900d1459}|THIERRYBREHON.FR.SERVICE.NSR.nfw.dll;{924b1136-ae23-4497-9a60-6187d2c0ec6a}|THIERRYBREHON.FR.SERVICE.NSS.nfw.dll;{375d8247-baca-4500-9d8e-c128c0066cd1}|THIERRYBREHON.FR.NSB.nfw.dll;{ddc1ca85-3278-49d3-80ae-f5c620544906}|THIERRYBREHON.FR.NSD.nfw.dll;{35109ac5-bd4f-4ab5-963b-4baf7eed6d30}|THIERRYBREHON.FR.NSE.nfw.dll;{c081919d-02a6-4454-aedf-af566e52a058}|THIERRYBREHON.FR.NSP.nfw.dll;{09bd7f23-cedf-4921-823e-0e53e809af1f}|THIERRYBREHON.FR.NSR.nfw.dll;{4492673b-e24f-467b-9351-72510831ddbe}|THIERRYBREHON.FR.NSS.nfw.dll;{a3a869d2-f4af-4b4a-b22c-71e0853e9cfb}|THIERRYBREHON.FR.Web.nfw.dll;{131e9a4f-bf3d-40d3-a2af-7d2e9402b067}|THIERRYBREHON.FR.X.MSSQL.nfw.dll;{dee667ae-7412-4540-8e1e-ea8a83855c13}|THIERRYBREHON.FR.X.nfw.dll;{7bf847ae-f716-4a30-bd7c-1840c8cfd5ee}|THIERRYBREHON.FR.Mail.nfw.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_55620"
 		Debug.AspNetCompiler.PhysicalPath = "www_Planning\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55620\"
@@ -76,7 +77,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www_Planning", "www_Plannin
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "55620"
+		SlnRelativePath = "www_Planning\"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THIERRYBREHON.FR.Mail.nfw.AllModif", "..\THIERRYBREHON.FR.nfw.Office\THIERRYBREHON.FR.Mail\THIERRYBREHON.FR.Mail.nfw.AllModif.csproj", "{7BF847AE-F716-4A30-BD7C-1840C8CFD5EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -200,6 +204,10 @@ Global
 		{02651746-F1ED-46C7-AF8C-15FFC3B7ABF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02651746-F1ED-46C7-AF8C-15FFC3B7ABF1}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{02651746-F1ED-46C7-AF8C-15FFC3B7ABF1}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{7BF847AE-F716-4A30-BD7C-1840C8CFD5EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BF847AE-F716-4A30-BD7C-1840C8CFD5EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BF847AE-F716-4A30-BD7C-1840C8CFD5EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BF847AE-F716-4A30-BD7C-1840C8CFD5EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

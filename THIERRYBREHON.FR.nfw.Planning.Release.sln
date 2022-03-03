@@ -23,6 +23,7 @@ EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "www_Planning", "www_Planning\", "{02651746-F1ED-46C7-AF8C-15FFC3B7ABF1}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		ProjectReferences = "{346896c3-941c-416d-953b-d3403c3a7acc}|DataBasePL.NSB.nfw.dll;{4630ac84-2d80-4fd1-ba1b-ffdd51f225bf}|DataBasePL.NSD.nfw.dll;{8d16ba97-73d4-49be-9a42-adcf0b1ff277}|DataBasePL.NSR.nfw.dll;{1b376fc5-7979-4ace-9873-6cb1d046ff90}|DataBasePL.NSS.nfw.dll;{e129e048-94cf-44dc-a223-febfc91e7231}|Planning.NSB.nfw.dll;{c24ddbb2-51ea-42ee-878d-dce805ded107}|Planning.NSD.nfw.dll;{52b6862f-196c-4c13-acdb-402ac0b97d9e}|Planning.NSP.nfw.dll;{9611ad06-3b3f-41c8-bc5f-ebc43998ad5b}|Planning.NSR.nfw.dll;{5c76b098-4d63-4498-a58c-2201cc6cbb40}|Planning.NSS.nfw.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_55620"
 		Debug.AspNetCompiler.PhysicalPath = "www_Planning\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_55620\"
