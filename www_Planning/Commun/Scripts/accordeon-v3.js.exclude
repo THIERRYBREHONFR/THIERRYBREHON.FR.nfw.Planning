@@ -1,0 +1,151 @@
+﻿function PlierByName(Name)
+{
+   document.getElementsByName(Name)[0].style.visibility="hidden";
+   document.getElementsByName(Name)[0].style.display="none";
+}
+function DeplierByName(Name)
+{
+   document.getElementsByName(Name)[0].style.visibility="visible";
+   document.getElementsByName(Name)[0].style.display="block";
+}
+
+function PlierById(Id)
+{
+ if (document.getElementById(Id)) {
+  document.getElementById(Id).style.visibility="hidden";
+   document.getElementById(Id).style.display="none";
+   }
+}
+function DeplierById(Id)
+{
+if (document.getElementById(Id)) {
+   document.getElementById(Id).style.visibility="visible";
+   document.getElementById(Id).style.display="block";
+   }
+}
+
+function PlierDeplierByName(Name)
+{
+   var VElement = document.getElementsByName(Name)[0];
+   if (VElement.style.visibility == "visible")
+      {VElement.style.visibility = "hidden";}
+   else
+      {VElement.style.visibility = "visible";}
+}
+
+function PlierDeplierById(Id)
+{
+   var VElement = document.getElementById(Id);
+   if (VElement.style.visibility == "visible")
+      {
+        VElement.style.visibility = "hidden";
+        VElement.style.display = "none";
+      }
+   else
+      {
+        VElement.style.visibility = "visible";
+        VElement.style.display = "block";
+      }
+}
+
+function ToutVoir(){var OElements = document.getElementsByTagName("div");var i = 0;for (i=0; i<OElements.length; i++){if (OElements[i].className == "Non_Visible"){OElements[i].className = "Visible";}}}
+function ToutMasquer(){var OElements = document.getElementsByTagName("div");var i = 0;for (i=0; i<OElements.length; i++){if (OElements[i].className == "Visible"){OElements[i].className = "Non_Visible";}}}
+
+function BasculerVisibilite(vTableId,vTrIdGroup,vLevelNb,vAll,vSeparator) {
+  if (GroupTrsIsVisible(vTableId,vTrIdGroup,vSeparator)==1)
+    HideTrs(vTableId,vTrIdGroup,vAll,vSeparator);
+  else
+    ShowTrs(vTableId,vTrIdGroup,vLevelNb,vSeparator);
+}
+
+function GroupTrsIsVisible(vTableId,vTrIdGroup,vSeparator){
+  var OElements = document.getElementById(vTableId).getElementsByTagName("tr");
+  for (i=0; i<OElements.length; i++){
+    if (TrId(OElements[i])==vTrIdGroup){
+      if (i+1<OElements.length && TrLevel(TrId(OElements[i+1]), vSeparator)>TrLevel(vTrIdGroup, vSeparator))
+        if (OElements[i+1].style.display=="none")
+          return 0;
+        else
+          return 1;
+    }
+  }
+  return 0;
+}
+
+function TrId(vTr){
+  VHFId=document.getElementById(vTr.id+'Id');
+  if (VHFId) return VHFId.value;
+  else return vTr.id;
+}
+
+function ShowTrs(vTableId,vTrIdGroup,vLevelNb,vSeparator){
+  var OElements = document.getElementById(vTableId).getElementsByTagName("tr");
+  var VInfLevel=TrLevel(vTrIdGroup, vSeparator)+1;
+  for (i=0; i<OElements.length; i++){
+    if (TrId(OElements[i])==vTrIdGroup && i+1<OElements.length){
+      VInfLevel=TrLevel(TrId(OElements[i+1]), vSeparator);
+    } 
+    if (TrIdStartsWith(TrId(OElements[i]), vTrIdGroup)==1 && (TrLevel(TrId(OElements[i]), vSeparator)<= VInfLevel-1+vLevelNb || GetTrHiddenVis(OElements[i])=="1")) {
+      OElements[i].style.display = "";
+      SetTrHiddenVis(OElements[i],"1");
+    }
+  }
+}
+
+function ShowAllTrs(vTableId,vLevelNb,vSeparator) {
+  var OElements = document.getElementById(vTableId).getElementsByTagName("tr");
+  for (i=0; i<OElements.length; i++){
+    if (TrLevel(TrId(OElements[i]), vSeparator)<= vLevelNb) {
+      OElements[i].style.display = "";
+      SetTrHiddenVis(OElements[i],"1");
+    }
+  }
+}
+
+function HideTrs(vTableId,vTrIdGroup,vAll,vSeparator){ // id de la table, id de la tr sur laquelle on clique, 1 si tout est définitivement replié sous cette tr
+  var OElements = document.getElementById(vTableId).getElementsByTagName("tr");
+  for (i=0; i<OElements.length; i++){
+    if (TrIdStartsWith(TrId(OElements[i]), vTrIdGroup)==1){
+      OElements[i].style.display = "none";
+      if (vAll || TrLevel(TrId(OElements[i]), vSeparator)== TrLevel(vTrIdGroup, vSeparator)+1)
+        SetTrHiddenVis(OElements[i],"0");
+    }
+  }
+}
+
+function HideAllTrs(vTableId,vSeparator){ // id de la table, id de la tr sur laquelle on clique, 1 si tout est définitivement replié sous cette tr
+  var OElements = document.getElementById(vTableId).getElementsByTagName("tr");
+  for (i=0; i<OElements.length; i++){
+    if (TrLevel(TrId(OElements[i]), vSeparator)>1){
+      OElements[i].style.display = "none";
+      SetTrHiddenVis(OElements[i],"0");
+    }
+  }
+}
+
+function SetTrHiddenVis(vTr, vBool) {
+  var VHf=document.getElementById(vTr.id+"Vis");
+  if (VHf) VHf.value=vBool
+}
+  
+function GetTrHiddenVis(vTr) {
+  var VHf=document.getElementById(vTr.id+"Vis");
+  if (VHf) return VHf.value;
+  else return '';
+}
+  
+function TrLevel(vId, vSeparator){
+  var i=0;
+  var index=-1;
+  do {
+    index=vId.indexOf(vSeparator,index+1);
+    if (index!=-1) i++;
+  }
+  while (index!=-1)
+  return i;
+}
+
+function TrIdStartsWith(vId, vTrIdGroup) {
+  if (vId!=vTrIdGroup && vId.substr(0,vTrIdGroup.length)==vTrIdGroup) return 1
+  else return 0;
+}

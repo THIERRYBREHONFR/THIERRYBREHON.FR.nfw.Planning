@@ -1,0 +1,36 @@
+﻿function ChangeResolution() {
+    // resizeTo params : integer representing the new *outerWidth* in pixels (including scroll bars, title bars, etc).
+    //Notes : it's no longer possible for a web site to change the default size of a window in a browser, according to the following rules:
+    //You can't resize a window or tab that wasn’t created by window.open.
+    //You can't resize a window or tab when it’s in a window with more than one tab.
+    var HF_Resolution = document.getElementById("HF_Resolution");
+    if (HF_Resolution.Valeur == "MAX") {
+        HF_Resolution.Valeur = "1200X800";//1184x692 ->+16/+108
+        window.resizeTo(1200, 800);
+    }
+    else if (HF_Resolution.Valeur == "1200X800") {
+        HF_Resolution.Valeur = "800X1200";//784x992
+        window.resizeTo(800, 1200);
+    }
+    else if (HF_Resolution.Valeur == "800X1200") {
+        HF_Resolution.Valeur = "768X576";//751x468
+        window.resizeTo(768, 576);
+    }//622x363 ->638x471
+    else if (HF_Resolution.Valeur == "768X576") {
+        HF_Resolution.Valeur = "576X768";//560x660
+        window.resizeTo(576, 768);
+    }
+    else if (HF_Resolution.Valeur == "576X768") {
+        HF_Resolution.Valeur = "640x480";//
+        window.resizeTo(640, 480);
+    }
+    else if (HF_Resolution.Valeur == "640x480") {
+        HF_Resolution.Valeur = "480x640";//
+        window.resizeTo(480, 640);
+    }
+    else //if (HF_Resolution.Valeur == "480x640") 
+    {
+        HF_Resolution.Valeur = "MAX"; //1584x792
+        window.resizeTo(screen.width, screen.height);
+    }
+}

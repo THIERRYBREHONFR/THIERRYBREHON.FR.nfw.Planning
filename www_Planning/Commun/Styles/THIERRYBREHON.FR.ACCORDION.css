@@ -1,0 +1,30 @@
+﻿/* groupe d'accordéons */
+.TBfr_ACCORDION_NOGROUP_CSS > *,
+.TBfr_ACCORDION_GROUP_CSS > * {
+}
+    /*Entête d'accordéon*/
+    .TBfr_ACCORDION_NOGROUP_CSS > * > *:first-child:not(.TBfr_ACCORDION_SHOW_ALL_CSS, .TBfr_ACCORDION_HIDE_ALL_CSS),
+    .TBfr_ACCORDION_GROUP_CSS > * > *:first-child:not(.TBfr_ACCORDION_SHOW_ALL_CSS, .TBfr_ACCORDION_HIDE_ALL_CSS) {
+        cursor: pointer;
+        font-size: 1.5rem;
+    }
+
+        .TBfr_ACCORDION_NOGROUP_CSS > * > *:first-child :not(.TBfr_ACCORDION_SHOW_ALL_CSS, .TBfr_ACCORDION_HIDE_ALL_CSS):before,
+        .TBfr_ACCORDION_GROUP_CSS > * > *:first-child :not(.TBfr_ACCORDION_SHOW_ALL_CSS, .TBfr_ACCORDION_HIDE_ALL_CSS):before {
+            content: "V ";
+        }
+
+    /*corps d'accordéon*/
+    .TBfr_ACCORDION_NOGROUP_CSS > * > *:not(:first-child),
+    .TBfr_ACCORDION_GROUP_CSS > * > *:not(:first-child) {
+    }
+/* zone cliquables pour plier ou déplier tous les accordéons de .TBfr_ACCORDION_GROUP_CSS */
+.TBfr_ACCORDION_SHOW_ALL_CSS::before {
+    content: "Tout déplier";
+    background-color: crimson;
+}
+
+.TBfr_ACCORDION_HIDE_ALL_CSS::before {
+    content: "Tout replier";
+    background-color: darkgoldenrod;
+}

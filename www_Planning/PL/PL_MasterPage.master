@@ -1,0 +1,94 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="PL_MasterPage.master.cs"
+    Inherits="PL_MasterPage" %>
+
+<%@ Register Assembly="THIERRYBREHON.FR.Components.nfw" Namespace="THIERRYBREHON.FR.Components" TagPrefix="cc2" %>
+<%@ Register Assembly="THIERRYBREHON.FR.Web.nfw" Namespace="THIERRYBREHON.FR.Web" TagPrefix="TBfr" %>
+<%@ Register Assembly="Planning.NSP.nfw" Namespace="Planning.NSP" TagPrefix="TBfr" %>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <!--#include file="../Commun/head.html" -->
+    <link href="styles/PL.css" rel="stylesheet" type="text/css" />
+    <link href="styles/PL_Web.css" rel="stylesheet" type="text/css" />
+    <link href="styles/PL_Master.css" rel="stylesheet" type="text/css" />
+    <link href="../commun/styles/THIERRYBREHON.FR.ACCORDION.js.css" rel="stylesheet" type="text/css" />
+    <link href="../commun/styles/THIERRYBREHON.FR.ACCORDION.css" rel="stylesheet" type="text/css" />
+    <script src="../Commun/Scripts/THIERRYBREHON.FR.ACCORDION.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server" />
+</head>
+<body onkeydown="javascript:navigate();">
+    <div class="conteneur_principal">
+        <form id="form2" runat="server" defaultbutton="default_btn">
+            <ul class="PL_Master_MenuPrincipal">
+                <li id="Div_ET" runat="server"><a href="../ET/ET_Sommaire.aspx?code=<%=MCode%>" title="Accueil">
+                    <i class="fas fa_home"></i>&nbsp;<img src="../ET/Images/Logo_Sommaire.JPG" alt="Autres appications" title="Autres appications" /></a></li>
+                <li id="Div_CO" runat="server"><a href="../CO/CO_Sommaire.aspx?code=<%=MCode%>">
+                    <img src="../CO/Images/logo_Sommaire.JPG" alt="Copropriété" title="Copropriété" /></a></li>
+                <li id="Div_SO" runat="server"><a href="../SO/SO_Sommaire.aspx?code=<%=MCode%>">
+                    <img src="../SO/Images/logo_Sommaire.JPG" alt="Soirées" title="Soirées" /></a></li>
+                <li id="Div_TA" runat="server"><a href="../TA/TA_Sommaire.aspx?code=<%=MCode%>">
+                    <img src="../TA/Images/logo_Sommaire.JPG" alt="Travaux" title="Travaux" /></a></li>
+                <li id="Div_TR" runat="server"><a href="../TR/PL_Sommaire.aspx?code=<%=MCode%>">
+                    <img src="../TR/Images/logo_Sommaire.JPG" alt="Tréso" title="Tréso" /></a></li>
+                <li id="Div_PDJ" runat="server"><a href="../PDJ/PDJ_Sommaire.aspx?code=<%=MCode%>">
+                    <img src="../PDJ/Images/logo_Sommaire.JPG" alt="Petit Déj" title="Petit déj" /></a></li>
+            </ul>
+            <ul class="PL_Master_EntetePage">
+                <li id="div_Summary" runat="server"><a href="../PL/PL_Sommaire.aspx?code=<%=MCode%>" title="Sommaire Planning">
+                    <img src="../PL/Images/logo_appli.JPG" alt="Planning" title="Planning" /><i class="fas fa_bars"></i></a></li>
+                <li>
+                    <h1>
+                        <TBfr:PL_Label ID="FTitrePage" runat="server" /></h1>
+                </li>
+                <li>
+                    <TBfr:PL_Button ID="FLogoutButton" ToolTip="Déconnexion" Text='<%# TemplateButtonText("IconLogoutButton", 0)%>' ClientIDMode="Static" runat="server"></TBfr:PL_Button>
+                </li>
+                <li>
+                    <TBfr:PL_HyperLink ID="FReloginButton" ToolTip="Déconnexion" Text='<%# TemplateButtonText("IconReloginButton", 0)%>' ClientIDMode="Static" runat="server"></TBfr:PL_HyperLink>
+                </li>
+            </ul>
+            <ul class="PL_Master_Panel">
+                <li>
+                    <ul class="PL_Master_SideMenu">
+                        <li>
+                            <TBfr:PL_Button ID="FReturnButton" Text='<%# TemplateButtonText("IconReturnButton",0)%>' ClientIDMode="Static" runat="server" />
+                        </li>
+                        <li>
+                            <asp:ContentPlaceHolder ID="PlaceHolderSideMenu" runat="server" />
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li>
+                            <TBfr:PL_Label ID="FCurrentStateDisplay" CssClass="PL_CurrentStateDisplay" ClientIDMode="Static" runat="server" /></li>
+                        <li>
+                            <TBfr:PL_Label ID="FMessageDisplay" CssClass="PL_MessageDisplay" ClientIDMode="Static" runat="server" /></li>
+                        <li>---------------------------------------</li>
+                        <li>
+                            <asp:ContentPlaceHolder ID="PlaceHolderForm" runat="server" />
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <TBfr:TBfr_HiddenField ClientIDMode="Static" ID="FModelsExportGridHiddenField" runat="server" />
+            <TBfr:PL_ImageButton ID="default_btn" OnClientClick="return false;" CssClass="pseudobutton" ClientIDMode="Static" runat="server" />
+
+            <%--Sources des combo box de filtre--%>
+            <asp:SqlDataSource ID="FSqlDataSourceFiltreId_planning" runat="server" ConnectionString="<%$ ConnectionStrings:SqlConnectionDataPL %>" />
+            <asp:SqlDataSource ID="FSqlDataSourceFiltreId_version" runat="server" ConnectionString="<%$ ConnectionStrings:SqlConnectionDataPL %>" />
+            <asp:SqlDataSource ID="FSqlDataSourceFiltreId_employe" runat="server" ConnectionString="<%$ ConnectionStrings:SqlConnectionDataPL %>" />
+            <%--Données persistentes à l'application--%>
+            <TBfr:TBfr_HiddenField ClientIDMode="Static" ID="FHFId_planning" runat="server" />
+            <TBfr:TBfr_HiddenField ClientIDMode="Static" ID="FHFId_version" runat="server" />
+            <TBfr:TBfr_HiddenField ClientIDMode="Static" ID="FHFId_employe" runat="server" />
+
+        </form>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ChildEtat" runat="server" />
+    </div>
+</body>
+</html>

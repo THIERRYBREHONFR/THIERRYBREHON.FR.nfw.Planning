@@ -1,0 +1,39 @@
+﻿/*
+    .BHN-VERTICAL-AUX-MENU : menu auxiliaire présenté verticalement
+    .BHN-ROW-AUX-MENU : menu auxiliaire présenté en ligne
+    .BHN-AUX-MENU-ITEM : item de menu auxilaire
+    a.BHN-AUX-MENU-ITEM : lien d'un item de menu auxiliaire
+    .BHN-AUX-MENU-ITEM-ACTIVE : item du menu correspondant à la page affichée
+*/
+.BHN-VERTICAL-AUX-MENU {
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    /*display: -webkit-inline-flex;*/
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.BHN-ROW-AUX-MENU {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.BHN-AUX-MENU-ITEM {
+}
+
+a.BHN-AUX-MENU-ITEM:hover {
+}
+
+.BHN-VERTICAL-AUX-MENU .BHN-AUX-MENU-ITEM {
+}
+
+.BHN-AUX-MENU-ITEM-ACTIVE, a.BHN-AUX-MENU-ITEM-ACTIVE:HOVER {
+}

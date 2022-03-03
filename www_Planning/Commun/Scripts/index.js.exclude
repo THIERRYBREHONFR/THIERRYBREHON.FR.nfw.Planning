@@ -1,0 +1,8 @@
+﻿$(document).ready(function () {
+    $(".INDEX-COUNTER").next().fadeTo(100, 0.3);
+    $(".INDEX-COUNTER").next().fadeTo(2500, 1);
+    bhn_dropdown_counter(0, 0, 2, "nbUtilisateurs");
+    bhn_dropdown_counter(0, 0, 2, "nbMessages");
+    bhn_dropdown_counter(0, 0, 2, "nbvisiteurs");
+    bhn_dropdown_counter(0, 0, 2, "nbPages");
+});

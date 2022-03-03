@@ -1,0 +1,148 @@
+﻿/* calés à droite */
+.zs_taux, .zs_coef, .zs_nombre, .zs_ptac, .zs_puiss, .zs_termekm, .zs_codepostal, .zs_heure, .zs_duree, .zs_nopage
+{
+    width: 45px;
+    text-align: right;
+    padding-right: 2px; /*background-color: Lime;*/
+}
+.zs_coutentretien, .zs_dimension
+{
+    width: 55px;
+    text-align: right;
+    padding-right: 2px; /*background-color: Lime;*/
+}
+.zs_km, .zs_basecalcul, .zs_mtinvest, .zs_loyer, .zs_ca
+{
+    width: 65px;
+    text-align: right;
+    padding-right: 2px; /*background-color: Lime;*/
+}
+
+.zs_date
+{
+    width: 75px;
+    text-align: right;
+    padding-right: 2px; /*background-color: Lime;*/
+}
+
+.zs_dateheure
+{
+    width: 95px;
+    text-align: right;
+    padding-right: 2px; /*background-color: Lime;*/
+}
+
+/* calés à gauche*/
+.zs_classegpe
+{
+    width: 35px; /*background-color: Lime;*/
+}
+.zs_unitemesure, .zs_civilite, .zs_noparc, .zs_immat, .zs_statutresa, .zs_refmerovee, .zs_statutaff
+{
+    width: 65px; /*background-color: Lime;*/
+}
+.zs_genrechass, .zs_typesociete, .zs_cabine, .zs_palette, .zs_typehayon, .zs_originereleve, .zs_typeaff
+{
+    width: 75px; /*background-color: Lime;*/
+}
+.zs_immat, .zs_adr, .zs_typeloc, /*.zs_motdepasse, .zs_login*/
+{
+    width: 85px; /*background-color: Lime;*/
+}
+.zs_telephone, .zs_analysefi
+{
+    width: 95px; /*background-color: Lime;*/
+}
+.zs_siret, .zs_cadeaux, .zs_typerdv, .zs_libparc, .zs_centreinteret
+{
+    width: 105px; /*background-color: Lime;*/
+}
+
+.zs_fmloption, .zs_ville, .zs_utilisation, .zs_burdistrib, .zs_fonction, .zs_nocontrat, .zs_nom, .zs_typessens, .zs_postefact, .zs_declarsinitre, .zs_motifimmo, .zs_notva, .zs_activite, .zs_refcontrat
+{
+    width: 155px; /*background-color: Lime;*/
+}
+.zs_raisonsoci, .zs_identite, .zs_gammeciale, .zs_marque, .zs_typechassis, .zs_refpneu, .zs_reftarif, .zs_bareme, .zs_option, .zs_ligneadresse, .zs_web, .zs_mail, .zs_libident, .zs_motifsortie, .zs_naturesinistre, .zs_typesinistre, .zs_typechauffeur, .zs_tamponcd
+{
+    width: 205px; /*background-color: Lime;*/
+}
+.zs_commentaire
+{
+    width: 305px; /*height: 55px; background-color: Lime;*/
+}
+.zs_listecontacts
+{
+    width: 205px;
+    height: 55px; /*background-color: Lime;*/
+}
+
+/* spéciaux */
+
+.zs_checkbox, .zs_radiobutton
+{
+    width: 19px;
+    height: 14px; /*background-color: Lime;*/
+}
+
+.zs_libellessens, .zs_referencessens, .zs_libellecaract, .zs_valtextecaract, .zs_typesaisie, .zs_suspension
+{
+    width: 255px; /*background-color: Lime;*/
+}
+.zs_prixoption, .zs_prixssens, .zs_prixchassis
+{
+    width: 85px;
+    text-align: right;
+    padding-right: 2px; /*background-color: Lime;*/
+}
+
+.zs_descriptionetude
+{
+    width: 455px; /*background-color: Lime;*/
+}
+.zs_mtinvest, .zs_mtvr, .zs_coutservice, .zs_depotgarantie
+{
+    width: 75px;
+    text-align: right;
+    padding-right: 2px; /* pour ie, permet d'fficher le curseur clignotant quand zone vide*/ /*background-color: Lime;*/
+}
+
+.zs_libdecalagepaiement
+{
+    width: 255px; /*background-color: Lime;*/
+}
+
+.zs_termefixe
+{
+    width: 55px;
+    text-align: right;
+    padding-right: 2px; /*background-color: Lime;*/
+}
+
+.zs_conditionreglement
+{
+    width: 355px; /*background-color: Lime;*/
+}
+.zs_nomfichier
+{
+    width: 355px; /*background-color: Lime;*/
+}
+.zs_chapitre
+{
+    width: 105px; /*background-color: Lime;*/
+}
+. zs_libelle_erreur
+{
+    width: 355px; /*background-color: Lime;*/
+}
+.zs_code
+{
+    width: 45px; /*background-color: Lime;*/
+}
+.zs_libelle
+{
+    width: 255px; /*background-color: Lime;*/
+}
+.zs_initiales
+{
+    width: 35px;
+}

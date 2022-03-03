@@ -1,0 +1,38 @@
+﻿/* 
+ THIERRYBREHON.FR.css
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Nordic alternative Bold";
+    src: url("'~/Fonts/Nordic Alternative Bold.otf'");
+}
+
+@font-face {
+    font-family: "Nordic alternative";
+    src: url("'~/Fonts/Nordic Alternative Regular.otf'");
+}
+
+html {
+    background-image: url(Commun/Images/fond.PNG);
+    background-repeat: repeat;
+    font-family: Candara;
+}
+
+.pseudobutton {
+    visibility: hidden;
+    color: red;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}

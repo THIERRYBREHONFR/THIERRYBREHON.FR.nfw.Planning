@@ -1,0 +1,183 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/ET/ET_MasterPage.master" AutoEventWireup="true"
+ CodeFile="AET_V_ET0_MotDePasse.aspx.cs" Inherits="AET_V_ET0_MotDePasse" Title="" %>
+
+<%@ Register Assembly="DevExpress.Web.v21.2" Namespace="DevExpress.Web" TagPrefix="dx" %>
+<%@ Register Assembly="THIERRYBREHON.FR.Web.nfw" Namespace="THIERRYBREHON.FR.Web" TagPrefix="TBfr" %>
+<%@ Register Assembly="Thierry.NSP.nfw" Namespace="Thierry.NSP" TagPrefix="TBfr" %>
+<%@ Register Src="ascx/ET_PopupExport.ascx" TagPrefix="exp" TagName="ET_PopupExport" %>
+<%@ Register Src="ascx/ET_SaveRestauModel.ascx" TagPrefix="mdl" TagName="ET_SaveRestauModel" %>
+
+<asp:Content ID="ContentForm" ContentPlaceHolderID="PlaceHolderForm" runat="server">
+    <ul>
+    <li><TBfr:ET_Label ID="FCurrentStateDisplay_7" CssClass="ET_CurrentStateDisplay" ClientIDMode="Static" runat="server" /></li>
+    <li><TBfr:ET_Label ID="FMessageDisplay_7" CssClass="ET_MessageDisplay" ClientIDMode="Static" runat="server" /></li>
+    </ul>
+    <ul>
+    <li id="FTabHeader_7" runat="server">
+            <span id="sp_liste_7" class="onglet" onclick="Affiche_div_7('liste_7')">Liste</span>
+            <span id="sp_detail_7" class="onglet" onclick="Affiche_div_7('detail_7')">Détail</span>
+</li>
+        <li id="vide_7" />
+        <li id="liste_7">
+            <TBfr:ET_RoundPanel ID="FFiltersTab_7" Collapsed="false" HeaderText="Filtres" ClientIDMode="Static" runat="server">
+                <PanelCollection>
+                    <dx:panelcontent>
+                        <ul>
+                        <li><TBfr:ET_TextBox ID="FiltreMotdepasse_7" Caption='<%# TemplateLabelValue(7,"LblFilterMotdepasse")%>' ClientIDMode="Static" runat="server" /></li>
+                        <li><TBfr:ET_TextBox ID="FiltreLogin_7" Caption='<%# TemplateLabelValue(7,"LblFilterLogin")%>' ClientIDMode="Static" runat="server" /></li>
+
+                        <li><TBfr:ET_Button ID="FFilterButton_7" text='<%# TemplateButtonText("IconFilterButton", 1)%>' ToolTip='<%# TemplateButtonText("TextFilterButton", 0)%>' ClientIDMode="Static" runat="server" /></li>
+                        <li><TBfr:ET_Button ID="FEmptyFiltersButton_7" text='<%# TemplateButtonText("IconEmptyFiltersButton", 1)%>' ToolTip='<%# TemplateButtonText("TextEmptyFiltersButton", 0)%>' ClientIDMode="Static" runat="server" /></li>
+                        </ul>
+                    </dx:panelcontent>
+                </PanelCollection>
+            </TBfr:ET_RoundPanel>
+            <TBfr:TBfr_GridViewExporter ID="GridViewExporter_7" GridViewID="grid_7" ClientIDMode="Static" runat="server" />
+            <TBfr:ET_GridView ID="grid_7" OnInit="Page_InitGridView" ClientIDMode="Static" runat="server" >
+              <columns>
+                    <dx:GridViewCommandColumn Name="c0" />
+                    <dx:GridViewCommandColumn Name="c1" />
+                    <dx:GridViewDataTextColumn Name="cId" />
+                    <dx:GridViewDataTextColumn Name="cMotdepasse" />
+                    <dx:GridViewDataTextColumn Name="cLogin" />
+
+              </columns>
+                <SettingsBehavior ConfirmDelete="true" />
+                <SettingsPopup>
+                    <EditForm Width="50px" />
+                </SettingsPopup>
+                <Templates>
+                    <PreviewRow>
+                        <ul>
+<li>
+                                    <TBfr:ET_TextBox D="PV_Motdepasse_7" Valeur='<%# TemplateColId(7,"PV_Motdepasse")%>' Caption='<%# TemplateLabelValue(7,"LblMotdepasse")%>' ClientIDMode="Static" runat="server" />
+
+</li>
+<li>
+                                    <TBfr:ET_TextBox D="PV_Login_7" Valeur='<%# TemplateColId(7,"PV_Login")%>' Caption='<%# TemplateLabelValue(7,"LblLogin")%>' ClientIDMode="Static" runat="server" />
+
+</li>
+
+                        </ul>
+                    </PreviewRow>
+                    <EditForm>
+                        <TBfr:TBfr_HiddenField ID="Logicaldeleted_7" Valeur='<%# TemplateStringValue(7,"Logicaldeleted","Logicaldeleted_7")%>' ClientIDMode="Static" runat="server" />
+                        <TBfr:TBfr_HiddenField ID="Id_7" Valeur='<%# TemplateStringValue(7,"Id","Id_7")%>' ClientIDMode="Static" runat="server" />
+                        <ul class="ET_Master_EditForm">
+                          <li><TBfr:ET_TextBox ID="AffId_7" Valeur='<%# TemplateStringValue(7,"Id","AffId_7")%>' ReadOnly="true" ClientIDMode="Static" runat="server" /></li>
+                          <li><TBfr:ET_Label ID="Lib_Delete_7" Valeur='<%# TemplateStringValue(7,"Lib_Delete","Lib_Delete_7")%>' ReadOnly="true" ClientIDMode="Static" runat="server" /></li>
+                          <li><dx:ASPxGridViewTemplateReplacement ID="UpdateButton" ReplacementType="EditFormUpdateButton" runat="server" />
+                              <dx:ASPxGridViewTemplateReplacement ID="CancelButton" ReplacementType="EditFormCancelButton" runat="server" /></li>
+<li>
+             <TBfr:ET_TextBox ID="Motdepasse_7" Valeur='<%# TemplateStringValue(7,"Motdepasse","Motdepasse_7")%>' Caption='<%# TemplateLabelValue(7,"LblMotdepasse")%>' ClientIDMode="Static" runat="server" />      
+
+</li>
+<li>
+             <TBfr:ET_TextBox ID="Login_7" Valeur='<%# TemplateStringValue(7,"Login","Login_7")%>' Caption='<%# TemplateLabelValue(7,"LblLogin")%>' ClientIDMode="Static" runat="server" />      
+
+</li>
+
+                        </ul>
+                    </EditForm>
+                </Templates>
+            </TBfr:ET_GridView>
+        <%--Sources des combobox de grille--%>
+
+        <%--Sources des combo box de filtre--%>
+
+</li>
+<li id="detail_7">
+<TBfr:TBfr_HiddenField ID="Logicaldeleted_7" Valeur='<%# TemplateStringValue(7,"Logicaldeleted", "Logicaldeleted_7")%>' ClientIDMode="Static" runat="server" />
+<TBfr:TBfr_HiddenField ID="Id_7" Valeur='<%# TemplateStringValue(7,"Id", "Id_7")%>' ClientIDMode="Static" runat="server" />
+<ul class="ET_Master_EditForm">
+<li><TBfr:ET_TextBox ID="AffId_7" Valeur='<%# TemplateStringValue(7,"Id", "AffId_7")%>' ReadOnly="true" ClientIDMode="Static" runat="server" /></li>
+<li>
+             <TBfr:ET_TextBox ID="Motdepasse_7" Valeur='<%# TemplateStringValue(7,"Motdepasse","Motdepasse_7")%>' Caption='<%# TemplateLabelValue(7,"LblMotdepasse")%>' ClientIDMode="Static" runat="server" />      
+
+</li>
+<li>
+             <TBfr:ET_TextBox ID="Login_7" Valeur='<%# TemplateStringValue(7,"Login","Login_7")%>' Caption='<%# TemplateLabelValue(7,"LblLogin")%>' ClientIDMode="Static" runat="server" />      
+
+</li>
+
+</ul>
+</li>
+</ul>
+    <asp:SqlDataSource ID="SqlDataSourceGrid_7" ConnectionString="<%$ ConnectionStrings:SqlConnectionDataET %>" runat="server" />
+<%--Sources des combo box de fiche UNIQUEMENT POUR _editpopup et editformrow--%>
+
+    <%--Variables cachées--%>
+            <TBfr:TBfr_HiddenField ID="FDisplayedTabHiddenField_7" ClientIDMode="Static" runat="server" />
+    <TBfr:TBfr_HiddenField ID="FCurrentStateHiddenField_7" runat="server" valeur="1" />
+    <TBfr:TBfr_HiddenField ID="FModelsExportGridHiddenField" runat="server" />
+</asp:Content>
+<asp:Content ID="ContentSideMenu" runat="server" ContentPlaceHolderID="PlaceHolderSideMenu">
+        <ul>
+    <li><TBfr:ET_Button ID="FCreateButton_7" text='<%# TemplateButtonText("IconCreateButton", 1)%>' ClientIDMode="Static" runat="server" /></li>
+    <li><TBfr:ET_Button ID="FDuplicateButton_7" text='<%# TemplateButtonText("IconDuplicateButton", 1)%>' ClientIDMode="Static" runat="server" /></li>
+    <li><TBfr:ET_Button ID="FUpdateButton_7" text='<%# TemplateButtonText("IconUpdateButton", 1)%>' ClientIDMode="Static" runat="server" /></li>
+    <li><TBfr:ET_Button ID="FDeleteButton_7" text='<%# TemplateButtonText("IconDeleteButton", 1)%>' ClientIDMode="Static" runat="server" /></li>
+    <li><TBfr:ET_Button ID="FValidateButton_7" text='<%# TemplateButtonText("IconValidateButton", 1)%>' ClientIDMode="Static" runat="server" /></li>
+    <li><TBfr:ET_Button ID="FCancelButton_7" text='<%# TemplateButtonText("IconCancelButton", 1)%>' ClientIDMode="Static" runat="server" /></li>
+
+            <li>
+                <TBfr:ET_Button ID="save_7" Text='<%# TemplateButtonText("IconSaveModelButton", 1)+ "&nbsp;" + TemplateButtonText("TextSaveModelButton", 0) %>' OnClick="OnClickShowSavePopup" ClientIDMode="Static" runat="server" />
+            </li>
+            <li>
+                <TBfr:ET_Button ID="restau_7" Text='<%# TemplateButtonText("IconApplyModelButton", 1)+ "&nbsp;" + TemplateButtonText("TextApplyModelButton", 0) %>' OnClick="OnClickShowRestauPopup" ClientIDMode="Static" runat="server" />
+            </li>
+            <li>
+<ul>
+            <li>
+                <TBfr:ET_Button ID="export_7" Text='<%# TemplateButtonText("IconExportGridButton", 1)+ "&nbsp;" + TemplateButtonText("TextExportGridButton", 0) %>' AutoPostBack="False" ClientIDMode="Static" runat="server">
+                    <ClientSideEvents Click="function(s, e) { ShowExportGridViewPopup('7'); }" />
+                </TBfr:ET_Button></li>
+            <li>
+                <TBfr:ET_Button ID="exportPdf_7" Text='<%# TemplateButtonText("IconExportPdfGridButton", 1)+ "&nbsp;" + TemplateButtonText("TextExportPdfGridButton", 0) %>' onclick="Export_Click" AutoPostBack="False" ClientIDMode="Static" runat="server"/>
+            </li>
+               <li>
+                <TBfr:ET_Button ID="exportXlsx_7" Text='<%# TemplateButtonText("IconExportXlsxGridButton", 1)+ "&nbsp;" + TemplateButtonText("TextExportXlsxGridButton", 0) %>' onclick="Export_Click" AutoPostBack="False" ClientIDMode="Static" runat="server"/>
+            </li>
+                <li>
+                <TBfr:ET_Button ID="exportXls_7" Text='<%# TemplateButtonText("IconExportXlsGridButton", 1)+ "&nbsp;" + TemplateButtonText("TextExportXlsGridButton", 0) %>' onclick="Export_Click" AutoPostBack="False" ClientIDMode="Static" runat="server"/>
+            </li>
+            <li>
+                <TBfr:ET_Button ID="exportCsv_7" Text='<%# TemplateButtonText("IconExportCsvGridButton", 1)+ "&nbsp;" + TemplateButtonText("TextExportCsvGridButton", 0) %>' onclick="Export_Click" AutoPostBack="False" ClientIDMode="Static" runat="server"/>
+            </li>
+               <li>
+                <TBfr:ET_Button ID="exportDocx_7" Text='<%# TemplateButtonText("IconExportDocxGridButton", 1)+ "&nbsp;" + TemplateButtonText("TextExportDocxGridButton", 0) %>' onclick="Export_Click" AutoPostBack="False" ClientIDMode="Static" runat="server"/>
+            </li>
+                <li>
+                <TBfr:ET_Button ID="exportDoc_7" Text='<%# TemplateButtonText("IconExportDocGridButton", 1)+ "&nbsp;" + TemplateButtonText("TextExportDocGridButton", 0) %>' onclick="Export_Click" AutoPostBack="False" ClientIDMode="Static" runat="server"/>
+            </li>
+</ul>
+        </li>
+            <li>
+                <TBfr:ET_Button ID="btnShowColumn_7" ClientInstanceName="btnShowColumn_7"
+                    Text='<%# TemplateButtonText("IconShowGridColumnsButton", 1)+ "&nbsp;" + TemplateButtonText("TextShowGridColumnsButton", 0) %>' UseSubmitBehavior="false" AutoPostBack="false" ClientIDMode="Static" runat="server">
+                    <ClientSideEvents Click="function(s, e) { btnShowColumn_Click(grid_7); }" />
+                </TBfr:ET_Button>
+            </li>
+            <li>
+                <TBfr:ET_Button ID="ShowRestauPreview_7" Text="Fiches/Lignes" OnClick="OnClickShowPreview" ClientIDMode="Static" runat="server" />
+            </li>
+            <li>
+                <TBfr:ET_Button ID="PopupEditForm_7" Text="Grille/Popup" OnClick="OnClickPopupEditForm" ClientIDMode="Static" runat="server" />
+            </li>
+        </ul>
+</asp:Content>
+<asp:Content ID="ContentScripts" ContentPlaceHolderID="ContentPlaceHolderHead" runat="server">
+    <script language="JavaScript" type="text/javascript">
+        window.onload = function () {
+            Affiche_div_7(document.getElementById("<%=DisplayedTabHiddenField(7).ClientID%>").value);
+            window.scrollTo(0, 0);
+        }
+function Affiche_div_7(Suffixe) {
+            ActualiserOngletChoisiById("sp_" + Suffixe, "vide_70", "");
+ActualiserOngletChoisiById("sp_" + Suffixe, "div_liste_7", "sp_liste_7");
+ActualiserOngletChoisiById("sp_" + Suffixe, "div_detail_7", "sp_detail_7");
+document.getElementById("<%=DisplayedTabHiddenField(7).ClientID%>").value = Suffixe;
+EnfonceById("sp_" + Suffixe);
+}
+    </script>
+</asp:Content>

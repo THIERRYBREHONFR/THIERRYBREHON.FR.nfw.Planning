@@ -1,0 +1,8 @@
+﻿    function pasteURL(strControlID)
+    {
+        //alert(strControlID);
+        var htmlControl = window.document.getElementById(strControlID);
+        //alert(htmlControl.value);
+        window.clipboardData.setData('Text', htmlControl.value);
+        alert("L'Url a été copiée dans votre Presse-Papier.");
+    }

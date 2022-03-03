@@ -1,0 +1,221 @@
+/* iubito's menu - http://iubito.free.fr/prog/menu.php - configuration du javascript */
+
+   function MefTitre(zonetitre){
+   return;
+     haut=35;
+     gauche=200;
+     nb=new Array('#DDDDDD','#BBBBBB','#999999','#DDDDDD','#FF00FF');
+     //nb=new Array('#DDDDDD','#CCCCCC','#BBBBBB','#AAAAAA','#999999','#888888','#FF00FF');'#CCCCCC','#AAAAAA',,'#888888'
+     nb_de_Couleurs=nb.length
+    
+     for(i=0;i<nb_de_Couleurs;i++){
+       if (i!=nb_de_Couleurs-2)
+       {
+         hautt=haut-i
+         gauchee=gauche-i
+       }
+       else
+       {
+         hautt=haut-nb_de_Couleurs-1
+         gauchee=gauche-nb_de_Couleurs-1
+      }
+       document.write("<div style='position:absolute;top:"+hautt+"px;left:"+gauchee+"px'>"
+         +"<table valign='center'><tr><td><center><font size=5.5 color="+nb[i]+"><b>"+document.getElementById(zonetitre).innerHTML+"</b></font></center></td></tr></table></div>")
+     }
+   }
+
+var timeout; //ne pas toucher, c'est pour déclarer la variable
+var agt = navigator.userAgent.toLowerCase();
+var isMac = (agt.indexOf('mac') != -1);
+var isOpera = (agt.indexOf("opera") != -1);
+var IEver = parseInt(agt.substring(agt.indexOf('msie ') + 5));
+var isIE = ((agt.indexOf('msie')!=-1 && !isOpera && (agt.indexOf('webtv')==-1)) && !isMac);
+var isIE5win = (isIE && IEver == 5);
+var isIE5mac = ((agt.indexOf("msie") != -1) && isMac);
+var blnOk=true;
+//pour enlever les "px" pour faire des calculs...
+var reg = new RegExp("px", "g");
+
+function preChargement()
+{
+	if (document.getElementById("conteneurmenu"))
+	{
+		document.getElementById("conteneurmenu").style.visibility="hidden";
+		//IE5 mac a un bug : quand un texte est dans un élément de style float, il n'apparait pas.
+		/*if (isIE5mac)
+		{
+			document.getElementById("conteneurmenu").style="";
+		}*/
+	}
+}
+
+function ChargementMenuHorizontal() {
+	if (!blnOk) {
+		if(document.body.style.backgroundColor!="") { blnOk=false; }
+		if(document.body.style.color!="") { blnOk=false; }
+		if(document.body.style.marginTop!="") { blnOk=false; }
+		if(document.getElementById) {
+			with(document.getElementById("conteneurmenu").style) {
+				if(position!="" || top!="" || left!=""
+						|| width!="" || height!="" || zIndex!=""
+						|| margin!="" || visibility!="") {
+					blnOk=false;
+				}
+			}
+		}
+		else{
+			blnOk=false;
+		}
+	}
+
+	if(blnOk)
+	{
+		document.getElementById("conteneurmenu").style.visibility="hidden";
+		
+		trimespaces();
+		
+		with(document.body.style) {
+			marginTop=marge_en_haut_de_page+"px";
+		}
+		
+		positionne();
+		CacherMenus();
+	}
+
+	// comme on a évité le clignotement, maintenant on fait apparaître le menu ;-)
+	document.getElementById("conteneurmenu").style.visibility='';
+}
+
+/*
+ * Place les éléments du menu correctement, au chargement, au scroll, au redimensionnement
+ * de la fenêtre
+ */
+function positionne() {
+	var largeur_fenetre = (isIE?document.body.clientWidth:window.innerWidth);
+	left_menu = (largeur_fenetre - (espace_entre_menus * (nbmenu-1) + largeur_menu * nbmenu))/2;
+	
+	//Menus
+	var cumul = 0;
+	for(i=1;i<=nbmenu;i++) {
+		with(document.getElementById("menu"+i).style) {
+			top=top_menu+"px";
+			left=(((i-1)*espace_entre_menus)+cumul+1+left_menu)+"px";
+			position="absolute";
+			margin="0";
+			zIndex="2";
+			width=largeur_menu+"px";
+			cumul += largeur_menu;
+		}
+	}
+	
+	//Sous-menus
+	cumul = 0;
+	for(i=1;i<=nbmenu;i++) {
+		if (document.getElementById("ssmenu"+i))//undefined
+		{
+			with(document.getElementById("ssmenu"+i).style) {
+				position="absolute";
+				top=top_ssmenu+"px";
+				left=(((i-1)*espace_entre_menus)+cumul+1+left_menu)+"px";
+				if (isIE || isOpera || isIE5mac || !largeur_auto_ssmenu) {
+					if (isFinite(largeur_sous_menu))
+						width = largeur_sous_menu+(largeur_sous_menu!="auto"?"px":"");
+					else
+						width = largeur_sous_menu[i-1]+(largeur_sous_menu[i-1]!="auto"?"px":"");
+				}
+				else width = "auto";
+				if (!isIE5mac) {
+					//repositionnement si déborde à droite
+					if ((width != "auto")
+						&& ((left.replace(reg,'').valueOf()*1 + width.replace(reg,'').valueOf()*1) > largeur_fenetre))
+						left = (largeur_fenetre-width.replace(reg,'').valueOf())+"px";
+				}
+				margin="0";
+				zIndex="3";
+			}
+		}
+		cumul += largeur_menu;
+	}
+}
+
+
+function MontrerMenu(strMenu) {
+	if(blnOk) {
+		AnnulerCacher();
+		CacherMenus();
+		if (document.getElementById(strMenu))//undefined
+			with (document.getElementById(strMenu).style)
+				visibility="visible";
+	}
+	SelectVisible("hidden",document.getElementsByTagName('select'));
+}
+
+function CacherDelai() {
+	if (blnOk) {
+		timeout = setTimeout('CacherMenus()',delai);
+	}
+}
+function AnnulerCacher() {
+	if (blnOk && timeout) {
+		clearTimeout(timeout);
+	}
+}
+function CacherMenus() {
+	if(blnOk) {
+		for(i=1;i<=nbmenu;i++) {
+			if (document.getElementById("ssmenu"+i))//undefined
+				with(document.getElementById("ssmenu"+i).style)
+					visibility="hidden";
+		}
+	}
+	SelectVisible("visible",document.getElementsByTagName('select'));
+}
+
+function trimespaces() {
+	//Contourne un bug d'IE5/win... il ne capte pas bien les css pour les <li>, donc on les vire !
+	if(blnOk&&isIE5win) {
+		for(i=1;i<=nbmenu;i++) {
+			if (document.getElementById("ssmenu"+i))//undefined
+				with(document.getElementById("ssmenu"+i))
+					innerHTML = innerHTML.replace(/<LI>|<\/LI>/g,"");
+		}
+	}
+}
+
+function SelectVisible(v,elem) {
+	if (blnOk && cacher_les_select && (isIE||isIE5win))
+		for (var i=0;i<elem.length;i++) elem[i].style.visibility=v;
+}
+
+function ChargementMenuVertival(VConteneurMenu, premiermenu, derniermenu, largeur_menu,hauteur_menu) {
+	if (!blnOk) {
+		if(document.body.style.backgroundColor!="") { blnOk=false; }
+		if(document.body.style.color!="") { blnOk=false; }
+		if(document.body.style.marginTop!="") { blnOk=false; }
+		if(document.getElementById) {
+			with(document.getElementById(VConteneurMenu).style) {
+				if(position!="" || top!="" || left!=""
+						|| width!="" || height!="" || zIndex!=""
+						|| margin!="" || visibility!="") {
+					blnOk=false;
+				}
+			}
+		}
+		else{
+			blnOk=false;
+		}
+	}
+
+	if(blnOk)
+	{
+	for(i=premiermenu;i<=derniermenu;i++) {
+		with(document.getElementById("menu"+i).style) {
+			top=((i-premiermenu)*hauteur_menu+1)+"px";
+			width=largeur_menu+"px";
+			position="absolute";
+			margin="0";
+			zIndex="2";
+		}
+	}
+	}
+}

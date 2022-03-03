@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ET_MasterPage.master.cs"
+    Inherits="ET_MasterPage" %>
+
+<%@ Register Assembly="THIERRYBREHON.FR.Web.nfw" Namespace="THIERRYBREHON.FR.Web" TagPrefix="TBfr" %>
+<%@ Register Assembly="Thierry.NSP.nfw" Namespace="Thierry.NSP" TagPrefix="TBfr" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!--#include file="../Commun/head.html" -->
+    <link href="styles/ET.css" rel="stylesheet" type="text/css" />
+    <link href="styles/ET_Web.css" rel="stylesheet" type="text/css" />
+    <link href="styles/ET_Master.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderHead" runat="server" />
+</head>
+<body onkeydown="javascript:navigate();">
+    <form id="form0" runat="server" defaultbutton="default_btn">
+        <ul class="ET_Master_MenuPrincipal">
+            <li id="Div_ET" runat="server"><a href="../ET/ET_Sommaire.aspx?code=<%=MCode%>" title="Accueil">
+                <i class="fas fa_home"></i>&nbsp;<img src="../ET/Images/Logo_Sommaire.JPG" alt="Autres appications" title="Autres appications" /></a></li>
+        </ul>
+        <ul class="ET_Master_EntetePage">
+            <li>
+                <h1>
+                    <tbfr:et_label id="FTitrePage" runat="server" />
+                </h1>
+            </li>
+            <li>
+                <tbfr:et_button id="FLogoutButton" tooltip="Déconnexion" text='<%# TemplateButtonText("IconLogoutButton", 0)%>' clientidmode="Static" runat="server"></tbfr:et_button>
+            </li>
+            <li>
+                <tbfr:et_hyperlink id="FReloginButton" tooltip="Déconnexion" text='<%# TemplateButtonText("IconReloginButton", 0)%>' clientidmode="Static" runat="server"></tbfr:et_hyperlink>
+            </li>
+        </ul>
+        <ul class="ET_Master_Panel">
+            <li>
+                <ul class="ET_Master_SideMenu">
+                    <li>
+                        <tbfr:et_button id="FReturnButton" text='<%# TemplateButtonText("IconReturnButton",0)%>' clientidmode="Static" runat="server" />
+                    </li>
+                    <li>
+                        <asp:ContentPlaceHolder ID="PlaceHolderSideMenu" runat="server" />
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li>
+                        <tbfr:et_label id="FCurrentStateDisplay" cssclass="ET_CurrentStateDisplay" runat="server" />
+                    </li>
+                    <li>
+                        <tbfr:et_label id="FMessageDisplay" cssclass="ET_MessageDisplay" runat="server" />
+                    </li>
+                    <li>---------------------------------------</li>
+                    <li>
+                        <asp:ContentPlaceHolder ID="PlaceHolderForm" runat="server" />
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <tbfr:tbfr_hiddenfield clientidmode="Static" id="FModelsExportGridHiddenField" runat="server" />
+        <tbfr:et_imagebutton id="default_btn" onclientclick="return false;" cssclass="pseudobutton" clientidmode="Static" runat="server" />
+    </form>
+</body>
+</html>

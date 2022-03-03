@@ -1,0 +1,65 @@
+﻿:root {
+    /*ACCORDION*/
+    --TBfr-BACKGROUND-COLOR-ACCORDION: var(--TBfr-GARDECORPS);
+    --TBfr-COLOR-ACCORDION: var(--TBfr-PANNEAUX);
+    --TBfr-BORDER-COLOR-ACCORDION: var(--TBfr-PANNEAUX);
+    /*--TBfr-BACKGROUND-COLOR-ACCORDION-HOVER: var(--TBfr-BLANC);
+    --TBfr-COLOR-ACCORDION-HOVER: var(--TBfr-NOIR);
+    --TBfr-BORDER-COLOR-ACCORDION-HOVER: var(--TBfr-PANNEAUX);*/
+    /*ACCORDION BODY*/
+    --TBfr-BACKGROUND-COLOR-ACCORDION-BODY: var(--TBfr-GARDECORPS);
+    --TBfr-COLOR-ACCORDION-BODY: var(--TBfr-PANNEAUX);
+    --TBfr-BORDER-COLOR-ACCORDION-BODY: var(--TBfr-PANNEAUX);
+    /*ACCORDION HEADER*/
+    --TBfr-BACKGROUND-COLOR-ACCORDION-HEADER: var(--TBfr-GARDECORPS);
+    --TBfr-COLOR-ACCORDION-HEADER: var(--TBfr-PANNEAUX);
+    --TBfr-BORDER-COLOR-ACCORDION-HEADER: var(--TBfr-GARDECORPS);
+    --TBfr-BACKGROUND-COLOR-ACCORDION-HEADER-HOVER: var(--TBfr-BLANC);
+    --TBfr-COLOR-ACCORDION-HEADER-HOVER: var(--TBfr-NOIR);
+    --TBfr-BORDER-COLOR-ACCORDION-HEADER-HOVER: var(--TBfr-BLANC);
+}
+
+.TBfr-ACCORDION {
+    background-color: var(--TBfr-BACKGROUND-COLOR-ACCORDION);
+    color: var(--TBfr-COLOR-ACCORDION);
+    border-color: var(--TBfr-BORDER-COLOR-ACCORDION);
+    margin: var(--TBfr-MARGIN-VERTICAL);
+}
+
+
+.TBfr-ACCORDION-HEADER {
+    background-color: var(--TBfr-BACKGROUND-COLOR-ACCORDION-HEADER);
+    color: var(--TBfr-COLOR-ACCORDION-HEADER);
+    border-color: var(--TBfr-BORDER-COLOR-ACCORDION-HEADER);
+    border-bottom: 1px solid;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 1rem 1rem 0rem 0rem;
+    -moz-border-radius: 1rem 1rem 0rem 0rem;
+    -webkit-border-radius: 1rem 1rem 0rem 0rem;
+}
+
+    .TBfr-ACCORDION-HEADER:hover {
+        background-color: var(--TBfr-BACKGROUND-COLOR-ACCORDION-HEADER-HOVER);
+        color: var(--TBfr-COLOR-ACCORDION-HEADER-HOVER);
+        border-color: var(--TBfr-BORDER-COLOR-ACCORDION-HEADER-HOVER);
+    }
+
+.TBfr-ACCORDION-BODY {
+    background-color: var(--TBfr-BACKGROUND-COLOR-ACCORDION-BODY);
+    color: var(--TBfr-COLOR-ACCORDION-BODY);
+    border-color: var(--TBfr-BORDER-COLOR-ACCORDION-BODY);
+    padding: 2rem 0.5rem 2rem 0.5rem;
+}
+
+.TBfr-ACCORDION-HIDE-ALL, .TBfr-ACCORDION-SHOW-ALL {
+    background-color: var(--TBfr-BACKGROUND-COLOR-ACCORDION-HEADER);
+    color: var(--TBfr-COLOR-ACCORDION-HEADER);
+    border-color: var(--TBfr-BORDER-COLOR-ACCORDION-HEADER);
+    border: 1px solid;
+}
+
+    .TBfr-ACCORDION-HIDE-ALL i, .TBfr-ACCORDION-SHOW-ALL i {
+        font-size: 2rem;
+    }

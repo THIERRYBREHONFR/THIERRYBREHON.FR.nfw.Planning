@@ -1,0 +1,301 @@
+﻿// Généré par GENERATEUR.THIERRYBREHON.FR le 31/08/2021 19:03:13
+using THIERRYBREHON.FR.NSB;
+using THIERRYBREHON.FR.NSS;
+using THIERRYBREHON.FR.NSD;
+using THIERRYBREHON.FR.NSR;
+using System.Linq;
+using System.Xml.Linq;
+using THIERRYBREHON.FR.Web;
+using THIERRYBREHON.FR.X;
+using DevExpress.Web;
+using System;
+using System.Data;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using Thierry.NSB;
+using Thierry.NSP;
+using Thierry.NSS;
+using Thierry.NSD;
+using Thierry.NSR;
+
+public partial class AET_V_ET0_MotDePasse : ETForm 
+{
+
+         #region création de l'écran
+
+        /// <summary>
+        /// Nombre de Fiches
+        /// </summary>
+        protected override int CardsCount => 1;
+
+        #endregion
+
+     #region preinit, valeurs obligatoires
+
+    //protected override bool Page_PreInitRequiredParametersCheckOnFirstEntrance()
+    //{
+    //    if (!base.Page_PreInitRequiredParametersCheckOnFirstEntrance())
+    //        return false;
+    //    if (Request.QueryString.AllKeys.FirstOrDefault(x => x == "cb") != null && Request.QueryString["cb"].IsNullOrEmpty()) // pas de valeur sélectionnée
+    //        return false;
+    //    if (Request.QueryString.AllKeys.FirstOrDefault(x => x == "po") != null && Request.QueryString["po"].IsNullOrEmpty()) // pas de valeur sélectionnée
+    //        return false;
+    //    if (Request.QueryString.AllKeys.FirstOrDefault(x => x == "pod") != null && Request.QueryString["pod"].IsNullOrEmpty()) // pas de valeur sélectionnée
+    //        return false;
+    //    if (Request.QueryString.AllKeys.FirstOrDefault(x => x == "cb") == null)
+    //        GoToNextScreen("TR/ATR_V_TR0_CompteBancaire_Poste.aspx", true,
+    //          ((string)null).AppendStrings(C_Query_CardSeparator.ToString(), null, Request.QueryString["po"]),
+    //          null, "cb" + C_Query_CardSeparator + "po", "E", true, null);
+    //    if (Request.QueryString.AllKeys.FirstOrDefault(x => x == "po") == null)
+    //        GoToNextScreen("TR/ATR_V_TR0_CompteBancaire_Poste.aspx", true,
+    //        Request.QueryString["cb"].AlternateValue("", null, Request.QueryString["cb"]).IfElse(This => This.IsNullOrEmpty(), _ => null, This => This + C_Query_CardSeparator.ToString()),
+    //            null, "cb" + C_Query_CardSeparator + "po", "E", true, null);
+    //    if (Request.QueryString.AllKeys.FirstOrDefault(x => x == "pod") == null)
+    //        GoToNextScreen("TR/ATR_V_TR0_Poste.aspx", true, null, null, "pod", "E", true, null);
+    //    return true;
+    //}
+
+    #endregion
+    
+    #region init   
+
+    protected override void Page_InitList(int iCard, WebFormMode webFormMode)
+    {
+            if (iCard == 7)
+        {
+    GridViewsList[iCard] = grid_7;
+        GridViewsList[iCard].DataSource = SqlDataSourceGrid_7;
+        base.Page_InitList(iCard, WebFormMode.PopupEditForm);
+
+        AssociatedTBfrBusinessCard[iCard] = new BET_V_ET0_MotDePasse(IStorageAccess);
+        AssociatedITBfrStorageCard[iCard] = new SET_V_ET0_MotDePasse(IStorageAccess);
+    }
+    }
+
+    #endregion
+
+    #region load
+
+       //protected override void Page_LoadGridView(object sender, EventArgs e)
+   //{
+   //    base.Page_LoadGridView(sender, e);
+   //    if (IsFirstEntrance)
+   //    {
+   ////        Positionnement de filtres, etc en fonction de paramètres transmis à l'écran
+   //        if (Request.Params["cb"].IsCompleted())
+   //            grid_7.AutoFilterByColumn(grid_7.Columns[AssociatedITBfrStorageCard[7].DbNameForOrderBy(DTR_V_TR0_Releve.C_Id_comptebancaire)], Request.Params["cb"]);
+   //        grid_7.DataColumns[AssociatedITBfrStorageCard[7].DbNameForOrderBy(DTR_V_TR0_Releve.C_Debut)].Settings.AutoFilterCondition = AutoFilterCondition.LessOrEqual;
+   //        grid_7.AutoFilterByColumn(grid_7.Columns[AssociatedITBfrStorageCard[7].DbNameForOrderBy(DTR_V_TR0_Releve.C_Debut)], DateTime.Now.AddMonths(-18).ToString("yyyy-MM-dd"));//"MM/dd/yyyy") );
+   //    }
+   //}
+
+#endregion
+
+    #region prerender
+
+    protected override void Page_PreRenderInitFilterCombos(int iCard)
+    {
+        base.Page_PreRenderInitFilterCombos(iCard);
+        if (iCard == 7)
+        {
+
+        }
+    }
+
+    protected override void SetConditionToFilterCombosParameters(int iCard)
+    {
+        base.SetConditionToFilterCombosParameters(iCard);
+        if (iCard == 7)
+        {
+            //if (FiltreMotdepasse_7.Valeur.IsCompleted())
+   
+            //    FilterCombosParameters[iCard].Condition = FilterCombosParameters[iCard].Condition.AppendStrings(null, " and ", AssociatedITBfrStorageCard[iCard].DbNameForWhere( DET_V_ET0_MotDePasse.C_Motdepasse, FilterCombosParameters[iCard].ViewPrefix) + FiltreMotdepasse_7.Valeur.ToSqlLike(true));
+            //if (FiltreLogin_7.Valeur.IsCompleted())
+   
+            //    FilterCombosParameters[iCard].Condition = FilterCombosParameters[iCard].Condition.AppendStrings(null, " and ", AssociatedITBfrStorageCard[iCard].DbNameForWhere( DET_V_ET0_MotDePasse.C_Login, FilterCombosParameters[iCard].ViewPrefix) +  FiltreLogin_7.Valeur.ToSqlLike(true));
+
+        }
+    }
+
+    protected override bool Page_PreRenderForbiddenFilters(int iCard) => false; 
+
+    protected override void FW_FiltresReadOnly_2(int iCard, Boolean readOnly)
+    { // prise en charge des cas standards par webpagegestion 
+        base.FW_FiltresReadOnly_2(iCard, readOnly);
+        if (iCard == 7)
+        {
+            FiltreMotdepasse_7.ReadOnly = readOnly;
+            FiltreLogin_7.ReadOnly = readOnly;
+
+        }
+    }
+
+    #endregion
+
+    #region gestion des libellés
+
+     protected override string ObjectName => RET_V_ET0_MotDePasse.Object ;
+       protected override string PageTitle => RET_V_ET0_MotDePasse.TitrePage ;
+        
+
+    protected override string TemplateColId(int iCard, string labelId)
+    {
+        if (iCard == 7)
+            switch (labelId)
+            {
+                case "PV_Motdepasse_7": return AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.C_Motdepasse);
+                case "PV_Login_7": return AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.C_Login);
+
+            }
+        return null;
+    }
+
+    protected override string TemplateLabelValue(int iCard, string labelId)
+    {
+        if (iCard==7)
+            switch (labelId)
+            {
+            case "LblFilterMotdepasse": 
+            case "LblMotdepasse": return RET_V_ET0_MotDePasse.LblMotdepasse;
+            case "LblFilterLogin": 
+            case "LblLogin": return RET_V_ET0_MotDePasse.LblLogin;
+
+            }
+        return base.TemplateLabelValue(iCard, labelId);
+    }
+   #endregion
+
+       protected override void ReadOnlyPopUp(int iCard, ITBfr_Control control, DataRowView row)
+    {
+        if (iCard == 7)
+        {
+            bool vReadOnly = false;
+            if (row != null)
+            {
+                // VReadOnly |= row[AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.C_Id_user)].ToString() != DUserRights.Id.ToString();
+            }
+
+           switch (((Control)control).ID)
+            {
+                case "Motdepasse_7": control.ReadOnly = vReadOnly; return;
+
+                case "Login_7": control.ReadOnly = true; return;
+
+            }
+        }
+        base.ReadOnlyPopUp(iCard, control, row);
+    }
+
+    #region construction de la gridview
+
+    protected override string DefaultSortList(int iCard)
+    {
+        string vResult = base.DefaultSortList(iCard);
+        if (iCard == 7) vResult = AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.);
+        return vResult;
+    }
+
+    protected override void AddColumnsGridView(int iCard)
+    {
+        base.AddColumnsGridView(iCard);
+        if (iCard == 7)
+        {
+            GridViewsList[iCard].AddCommandColumns(-1);
+                     GridViewsList[iCard].AddTextColumn(AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.C_Motdepasse), null);
+
+
+                     GridViewsList[iCard].AddTextColumn(AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.C_Login), null);
+
+
+
+        }
+    }
+    
+    protected override void AlterColumnsGridView(int iCard)
+    {
+        base.AlterColumnsGridView(iCard);
+        if (iCard == 7)
+        {
+            GridViewsList[iCard].AlterCommandColumns(-1);
+            AlterColumnMotdepasse_7(iCard, -1, null, null);
+
+            AlterColumnLogin_7(iCard, -1, null, null)ReadOnly = true;
+
+   }
+    }
+
+    private GridViewDataColumn AlterColumnMotdepasse_7(int iCard, Unit width, string labelGrid, string toolTip)
+              => GridViewsList[iCard].AlterTextColumn("c"+ AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.C_Motdepasse), !Page_PreRenderForbiddenFilters(iCard), !Page_PreRenderForbiddenFilters(iCard), width, AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.C_Motdepasse), labelGrid.IsCompleted() ? labelGrid : RET_V_ET0_MotDePasse.LgdMotdepasse, toolTip.IsCompleted() ? toolTip : RET_V_ET0_MotDePasse.TtpMotdepasse, null);
+
+
+    private GridViewDataColumn AlterColumnLogin_7(int iCard, Unit width, string labelGrid, string toolTip)
+              => GridViewsList[iCard].AlterTextColumn("c"+ AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.C_Login), !Page_PreRenderForbiddenFilters(iCard), !Page_PreRenderForbiddenFilters(iCard), width, AssociatedITBfrStorageCard[iCard].DbNameForOrderBy(DET_V_ET0_MotDePasse.C_Login), labelGrid.IsCompleted() ? labelGrid : RET_V_ET0_MotDePasse.LgdLogin, toolTip.IsCompleted() ? toolTip : RET_V_ET0_MotDePasse.TtpLogin, null);
+
+
+
+
+    protected override void UpdateComboBoxColumnsGrid(int iCard)
+    {
+        base.UpdateComboBoxColumnsGrid(iCard);
+        ITBfrStorageParameters vParameters = null;
+        if (iCard == 7)
+        {
+
+        }
+    }
+
+    #endregion
+
+    protected override void InitPopupControls(int iCard, Control control)
+    {
+        base.InitPopupControls(iCard, control);
+        if (iCard==7)
+          switch (control.ID)
+          {
+
+          }
+    }
+
+    #region determination d'une valeur en fonction d'un controle
+
+    protected override string ValueFromNull(int iCard, string sqlName)
+    {
+        if (iCard == 7)
+            switch (sqlName)
+            {
+
+	        }
+		return base.ValueFromNull(iCard, sqlName);
+    }
+
+    protected override string ValueFromD(int iCard, string sqlName, string forControlId, TBfrData_List data_List, ITBfrStorageView storageView)
+    {
+        var vResult = base.ValueFromD(iCard, sqlName, forControlId, data_List, storageView);
+        if (iCard == 7)
+            switch (forControlId)
+            {
+                // case "Id_7": return vResult;
+                // case "Motdepasse_7": return vResult;
+
+                // case "Login_7": return vResult;
+
+            }
+        return vResult;
+    }
+
+    #endregion
+
+    protected override void InitGridParameters(int iCard)
+    {
+        base.InitGridParameters(iCard);
+        if (iCard == 7)
+        {
+        if (FiltreMotdepasse_7.Valeur.IsCompleted())
+            GridParameters[iCard].Condition = GridParameters[iCard].Condition.AppendStrings(null, " and ", AssociatedITBfrStorageCard[iCard].DbNameForWhere( DET_V_ET0_MotDePasse.C_Motdepasse) + FiltreMotdepasse_7.Valeur.ToSqlLike(true));
+        if (FiltreLogin_7.Valeur.IsCompleted())
+            GridParameters[iCard].Condition = GridParameters[iCard].Condition.AppendStrings(null, " and ", AssociatedITBfrStorageCard[iCard].DbNameForWhere( DET_V_ET0_MotDePasse.C_Login) + FiltreLogin_7.Valeur.ToSqlLike(true));
+
+        }
+   }
+}
+

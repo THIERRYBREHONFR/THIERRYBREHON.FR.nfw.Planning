@@ -1,0 +1,30 @@
+﻿/* 
+ ET.css : Charte THIERRYBREHON.FR
+*/
+:root {
+    --TBfr_COLOR0: #003232;
+    --TBfr_COLOR25: #19324B;
+    --TBfr_COLOR50: #323264;
+    --TBfr_COLOR75: #4B327D;
+    --TBfr_COLOR100: #643296;
+    --TBfr_COLOR125: #7D32AF;
+    --TBfr_COLOR150: #9632C8;
+    --TBfr_COLOR175: #AF32E1;
+    --TBfr_COLOR200: #C832FA;
+    --TBfr_BACKCOLOR0: #FFCDCD;
+    --TBfr_BACKCOLOR25: #E6CDB4;
+    --TBfr_BACKCOLOR50: #CDCD9B;
+    --TBfr_BACKCOLOR75: #B4CD82;
+    --TBfr_BACKCOLOR100: #9BCD69;
+    --TBfr_BACKCOLOR125: #82CD50;
+    --TBfr_BACKCOLOR150: #69CD37;
+    --TBfr_BACKCOLOR175: #50CD1E;
+    --TBfr_BACKCOLOR200: #37CD05;
+    --TBfr_COLOR: #643296; /*--TBfr_COLOR100*/
+    --TBfr_BACKCOLOR: #E6CDB4; /*--TBfr_BACKCOLOR25*/
+}
+
+html {
+    color: var(--TBfr_COLOR);
+    background-color: var(--TBfr_BACKCOLOR);
+}

@@ -1,0 +1,477 @@
+﻿.Css_TBfr_Button {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    background: url("empty.png");
+    border: 0.2rem var(--TBfr_COLOR);
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-top-style: double;
+    border-left-style: double;
+}
+
+.Css_TBfr_CheckBox {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_ComboBox {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_DataGridView {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_DateEdit {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_DateTimeEdit {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_DropDownEdit {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_DropDownEditMulti {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_GridView {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_HtmlEditor {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_Image {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_ImageButton {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_Label {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_HyperLink {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    border-width: 0.2rem;
+    border-bottom-style: solid;
+    border-right-style: solid;
+    border-top-style: double;
+    border-left-style: double;
+}
+
+.Css_TBfr_ListBox {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_Memo {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_PivotCustomizationControl {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_PivotGrid {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_RadioButton {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_RadioButtonList {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_RoundPanel {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_SpinEdit {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_TextBox {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_TimeEdit {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_TokenBox {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_TrackBar {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_TBfr_TreeList {
+    color: var(--TBfr_COLOR);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_CheckBox {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_ComboBox {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_DateEdit {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_DateTimeEdit {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_DropDownEdit {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_DropDownEditMulti {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_ListBox {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_Memo {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_RadioButton {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_RadioButtonList {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_SpinEdit {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_TextBox {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_TimeEdit {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_TokenBox {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_RO_TBfr_TrackBar {
+    color: var(--TBfr_ROCOLOR);
+    background-color: var(--TBfr_ROBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+}
+
+.Css_Dis_TBfr_Button {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_CheckBox {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_ComboBox {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_DateEdit {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_DateTimeEdit {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_DropDownEdit {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_DropDownEditMulti {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_GridView {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_HtmlEditor {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_ImageButton {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_Label {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_HyperLink {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_ListBox {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_Memo {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_PivotCustomizationControl {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_PivotGrid {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_RadioButton {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_RadioButtonList {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_RoundPanel {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_SpinEdit {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_TextBox {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_TimeEdit {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_TokenBox {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_TrackBar {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}
+
+.Css_Dis_TBfr_TreeList {
+    color: var(--TBfr_DisCOLOR);
+    background-color: var(--TBfr_DisBackColor);
+    padding: 0.1rem;
+    margin: 0.1rem;
+    font-style: italic;
+}

@@ -1,0 +1,11 @@
+﻿$(document).ready(function () {
+    $(".BHN-VERTICAL-SUB-MENU,.BHN-ROW-SUB-MENU").hide();
+    $(".BHN-MAIN-MENU-ITEM, .BHN-SUB-MENU-ITEM").click(function () {
+        var ident = "#" + $(this).attr("data-toggle");
+        $(".BHN-VERTICAL-SUB-MENU,.BHN-ROW-SUB-MENU").not(ident).slideUp(300);
+        $(ident).slideToggle(300);
+    });
+    $(".BHN-MAIN-MENU-BURGER").click(function () {
+        $('#BHN-SUB-MENU-BURGER').slideToggle();
+    });
+});

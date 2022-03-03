@@ -1,0 +1,16 @@
+﻿ul.ET_Sommaire_EntetePage > li {
+    display: inline-block;
+}
+
+ul.ET_Sommaire_Bonjour > li {
+    display: inline-block;
+}
+
+    .ET_Sommaire_Bonjour > li:first-child {
+        font-size: 1.5rem;
+    }
+
+ul.ET_Sommaire_MenuPrincipal > li {
+    margin: 0.5rem;
+    display: block;
+}

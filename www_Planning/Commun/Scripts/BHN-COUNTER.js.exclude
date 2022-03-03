@@ -1,0 +1,34 @@
+﻿function bhn_dropdown_counter(debut, intervalle, duree, balise) {
+    //debut= Nombre initial du compteur
+    //fin= Nombre final du compteur
+    //    duree =  Durée en seconde pendant laquel le compteur déroulera
+    var node = document.getElementById(balise); // On récupère notre noeud où sera rafraîchi la valeur du compteur
+    var fin = node.innerHTML;
+    node.style.visibility = "visible";
+    node.innerHTML = 0;
+    var cpt;// Initialisation du compteur
+    var delta;
+    cpt = debut;
+    var inter;
+    delta = 200;
+    if (intervalle == 0)
+        inter = Math.ceil((delta * (debut - fin)) / 1000 / duree);
+    else if (debut < fin) inter = -1 * Math.abs(intervalle);
+    else inter = Math.abs(intervalle);
+    if (inter == 0) if (debut < fin) inter = -1; else inter = 1;
+    delta = Math.ceil((duree * 1000 * inter) / (debut - fin));
+    setTimeout(countdown, delta);
+    function countdown() {
+        cpt = cpt - inter;
+        if (debut < fin) {
+            if (cpt > fin) cpt = fin;
+            node.innerHTML = cpt;
+            if (cpt < fin) setTimeout(countdown, delta); // Si on est pas arrivé à la valeur finale, on relance notre compteur une nouvelle fois
+        }
+        else {
+            if (cpt < fin) cpt = fin;
+            node.innerHTML = cpt;
+            if (cpt > fin) setTimeout(countdown, delta); // Si on est pas arrivé à la valeur finale, on relance notre compteur une nouvelle fois
+        }
+    }
+}

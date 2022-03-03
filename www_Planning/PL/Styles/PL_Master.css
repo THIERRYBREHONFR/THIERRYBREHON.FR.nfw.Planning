@@ -1,0 +1,51 @@
+﻿ul.PL_Master_MenuPrincipal {
+    border: 0.1rem solid;
+}
+
+    ul.PL_Master_MenuPrincipal > li {
+        display: inline-block;
+    }
+
+ul.PL_Master_EntetePage {
+    border: 0.1rem solid;
+}
+
+    ul.PL_Master_EntetePage > li {
+        display: inline-block;
+    }
+
+ul.PL_Master_Panel {
+}
+
+    ul.PL_Master_Panel > li {
+        display: inline-flex;
+        border: 0.1rem solid;
+    }
+
+ul.PL_Master_SideMenu > li {
+    padding: 0.3rem;
+}
+
+    ul.PL_Master_SideMenu > li > ul > li:nth-child(1) {
+        border-top: 0.1rem solid;
+    }
+
+    ul.PL_Master_SideMenu > li > ul > li > ul > li {
+        padding-left: 2rem;
+    }
+
+        ul.PL_Master_SideMenu > li > ul > li > ul > li:nth-child(1) {
+            padding-left: 0rem;
+        }
+
+ul.PL_Master_EditForm > li > ul > li {
+    display: inline-block;
+}
+
+    ul.PL_Master_EditForm > li > ul > li > ul > li > ul > li {
+        display: inline-block;
+    }
+
+        ul.PL_Master_EditForm > li > ul > li > ul > li > ul > li > ul > li > ul > li {
+            display: inline-block;
+        }

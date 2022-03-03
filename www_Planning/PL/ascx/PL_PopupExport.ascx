@@ -1,0 +1,209 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PL_PopupExport.ascx.cs"
+    Inherits="PL_PopupExport" %>
+<%@ Register Assembly="DevExpress.Web.v21.2" Namespace="DevExpress.Web"
+    TagPrefix="dx" %>
+<%@ Register Assembly="THIERRYBREHON.FR.Web.nfw" Namespace="THIERRYBREHON.FR.Web" TagPrefix="TBfr" %>
+<%@ Register Assembly="Planning.NSP.nfw" Namespace="Planning.NSP" TagPrefix="TBfr" %>
+<TBfr:TBfr_PopupControl ID="ExportDoc" runat="server" CloseAction="CloseButton" Modal="True"
+    Width="500px" PopupHorizontalAlign="WindowCenter" PopupVerticalAlign="WindowCenter"
+    ClientInstanceName="ExportDoc" HeaderText="Export" AllowDragging="True" PopupAnimationType="Auto"
+    EnableViewState="False">
+    <contentcollection>
+            <dx:PopupControlContentControl>
+                <table>
+                 <tr id="FCompatibiliteImport" runat="server" visible="false">
+                        <td style="background-color: Silver; vertical-align: top;">
+                            Compatibilité import
+                        </td>
+                        <td style="background-color: #DDDDDD; vertical-align: top;">
+                            <table>
+                              <tr>
+                                   <td colspan="4">
+                                        <TBfr:PL_CheckBox ID="FExpImp" Checked="false" ClientInstanceName="PExpImp" 
+                                            Text="En cochant cette case, vous exportez dans un Format excel compatible avec l'import." runat="server" />
+                                    </td>
+                                </tr>  
+                                <tr>
+                                   <td colspan="4">
+                                             Dans ce cas, les options ci-dessous sont inutiles.
+                                     </td>
+                                </tr>   
+                            </table>
+                        </td>
+                    </tr>
+                            <tr id="FLikeOnScreenVisible" runat="server" >
+                <td style="background-color: Silver; vertical-align: top;">
+                            Données exportées
+                        </td>
+                        <td style="background-color: #DDDDDD; vertical-align: top;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FDataLikeOnScreen" Checked="true" Text="Exporter tel qu'à l'écran"
+                                            GroupName="PreservationGroupes" runat="server" />
+                                    </td>
+                                    <td>
+                                        TOUTES les pages sont exportées, mais pas les données masquées.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <TBfr:PL_RadioButton  Checked="false" Text="Exporter toutes les données"
+                                            GroupName="PreservationGroupes" runat="server" />
+                                    </td>
+                                    <td>
+                                        Attention le temps de réponse peut être conséquent
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: Silver; vertical-align: top;">
+                            Format du fichier
+                        </td>
+                        <td style="background-color: #DDDDDD; vertical-align: top;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        Formats mis en forme
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FPdf" Checked="false" ClientInstanceName="PPdf" GroupName="FormatFichier"
+                                            Text="*.pdf" runat="server" />
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FXls" Checked="false" ClientInstanceName="PXls" GroupName="FormatFichier"
+                                            Text="*.xls" runat="server" />
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FXlsx" Checked="false" ClientInstanceName="PXlsX" GroupName="FormatFichier"
+                                            Text="*.xlsx" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Formats bruts
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FCsv" Checked="false" ClientInstanceName="PCsv" GroupName="FormatFichier"
+                                            Text="*.csv" runat="server" visible="false" />
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FXlsBrut" Checked="false" ClientInstanceName="PXlsBrut" GroupName="FormatFichier"
+                                            Text="*.xls" runat="server" />
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FXlsxBrut" Checked="true" ClientInstanceName="PXlsxBrut"
+                                            GroupName="FormatFichier" Text="*.xlsx" runat="server" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr id="specialpdf">
+                        <td style="background-color: Silver; vertical-align: top;">
+                            Format du document (APPLICABLE UNIQUEMENT AU FORMAT PDF)
+                        </td>
+                        <td style="background-color: #DDDDDD; vertical-align: top;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        Papier
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FA4" Checked="true" GroupName="FormatPapier" Text="A4" runat="server" />
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FA3" Checked="false" GroupName="FormatPapier" Text="A3" runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Orientation
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FPaysage" Checked="true" GroupName="Orientation" Text="Paysage"
+                                            runat="server" />
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_RadioButton ID="FPortrait" Checked="false" GroupName="Orientation" Text="Portrait"
+                                            runat="server" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <table>
+                                            <tr>
+                                                <td colspan="4" style="text-align: center;">
+                                                    Marges (mm)
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                </td>
+                                                <td style="text-align: right;">
+                                                    Haut
+                                                </td>
+                                                <td>
+                                                    <TBfr:PL_TextBox ID="FTopMargin" runat="server" Text="30" />
+                                                </td>
+                                                <td>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    Gauche
+                                                </td>
+                                                <td>
+                                                    <TBfr:PL_TextBox ID="FLeftMargin" runat="server" Text="10" />
+                                                </td>
+                                                <td style="text-align: right;">
+                                                    Droite
+                                                </td>
+                                                <td>
+                                                    <TBfr:PL_TextBox ID="FRightMargin" runat="server" Text="10" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                </td>
+                                                <td style="text-align: right;">
+                                                    Bas
+                                                </td>
+                                                <td>
+                                                    <TBfr:PL_TextBox ID="FBottomMargin" runat="server" Text="10" />
+                                                </td>
+                                                <td>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: Silver; vertical-align: top;">
+                        </td>
+                        <td style="background-color: #DDDDDD; vertical-align: top;">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <TBfr:PL_Button ID="FExportButton" runat="server" Text="Exporter" Width="100px">
+                                            <ClientSideEvents Click="function(s, e) { ExportDoc.Hide(); }" />
+                                        </TBfr:PL_Button>
+                                    </td>
+                                    <td>
+                                        <TBfr:PL_Button runat="server" Text="Annuler" Width="100px" AutoPostBack="False">
+                                            <ClientSideEvents Click="function(s, e) { ExportDoc.Hide(); }" />
+                                        </TBfr:PL_Button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </dx:PopupControlContentControl>
+        </contentcollection>
+</TBfr:TBfr_PopupControl>

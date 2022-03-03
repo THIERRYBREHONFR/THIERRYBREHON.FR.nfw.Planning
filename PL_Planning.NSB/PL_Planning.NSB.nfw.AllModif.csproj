@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Planning.NSB</RootNamespace>
+    <AssemblyName>Planning.NSB.nfw</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>nfw\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NFW</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>nfw\bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NFW</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BPL_V_PL0_CategorieContrainte_gen.cs" />
+    <Compile Include="BPL_V_PL0_Categorie_gen.cs" />
+    <Compile Include="BPL_V_PL0_Contrainte_gen.cs" />
+    <Compile Include="BPL_V_PL0_Employe_gen.cs" />
+    <Compile Include="BPL_V_PL0_EquipeEmployeVersion_gen.cs" />
+    <Compile Include="BPL_V_PL0_Equipe_gen.cs" />
+    <Compile Include="BPL_V_PL0_Planning_gen.cs" />
+    <Compile Include="BPL_V_PL0_Realisation_gen.cs" />
+    <Compile Include="BPL_V_PL0_TypeCategorie_gen.cs" />
+    <Compile Include="BPL_V_PL0_TypeTache_gen.cs" />
+    <Compile Include="BPL_V_PL0_Utilisateur_gen.cs" />
+    <Compile Include="BPL_V_PL0_Version_gen.cs" />
+    <Compile Include="BPL_V_PL9_Droits_gen.cs" />
+    <Compile Include="Properties\AssemblyInfo.nfw.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DBPL_DataBasePL.NSB\DB_DataBasePL.NSB.nfw.AllModif.csproj">
+      
+      <Name>DB_DataBasePL.NSB.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PL_Planning.NSD\PL_Planning.NSD.nfw.AllModif.csproj">
+      
+      <Name>PL_Planning.NSD.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PL_Planning.NSR\PL_Planning.NSR.nfw.AllModif.csproj">
+      
+      <Name>PL_Planning.NSR.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\PL_Planning.NSS\PL_Planning.NSS.nfw.AllModif.csproj">
+      
+      <Name>PL_Planning.NSS.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Business\THIERRYBREHON.FR.NSB\THIERRYBREHON.FR.NSB.nfw.AllModif.csproj">
+      
+      <Name>THIERRYBREHON.FR.NSB.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Data\THIERRYBREHON.FR.NSD\THIERRYBREHON.FR.NSD.nfw.AllModif.csproj">
+      
+      <Name>THIERRYBREHON.FR.NSD.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Sql\THIERRYBREHON.FR.NSS\THIERRYBREHON.FR.NSS.nfw.AllModif.csproj">
+      
+      <Name>THIERRYBREHON.FR.NSS.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Essentiels\THIERRYBREHON.FR.NSR\THIERRYBREHON.FR.NSR.nfw.AllModif.csproj">
+      
+      <Name>THIERRYBREHON.FR.NSR.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Essentiels\THIERRYBREHON.FR.X.MSSQL\THIERRYBREHON.FR.X.MSSQL.nfw.AllModif.csproj">
+      
+      <Name>THIERRYBREHON.FR.X.MSSQL.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Essentiels\THIERRYBREHON.FR.X\THIERRYBREHON.FR.X.nfw.AllModif.csproj">
+      
+      <Name>THIERRYBREHON.FR.X.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\THIERRYBREHON.FR.nfw.Thierry\ET_Thierry.NSS\ET_Thierry.NSS.nfw.AllModif.csproj">
+      
+      <Name>ET_Thierry.NSS.nfw.AllModif</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

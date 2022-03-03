@@ -1,0 +1,114 @@
+﻿/*
+structure :
+<element0 class="TBfr_ACCORDION_GROUP_JS">
+   <element1>
+       <element2> zone cliquable pour plier ou déplier les élements 3 </element2>
+       <element3> zones pliées ou dépliées </element3>
+       <element3> zones pliées ou dépliées </element3>
+       <element3> zones pliées ou dépliées </element3>
+   </element1>
+   <element1>
+       <element2> zone cliquable pour plier ou déplier les élements 3 </element2>
+       <element3> zones pliées ou dépliées </element3>
+       <element3> zones pliées ou dépliées </element3>
+       <element3> zones pliées ou dépliées </element3>
+   </element1>
+</element0>
+
+<element0 class="TBfr_ACCORDION_NOGROUP_JS">
+    <element1>
+       <element2 class="TBfr_ACCORDION_HIDE_ALL_JS"></element2>
+       <element2 class="TBfr_ACCORDION_SHOW_ALL_JS"></element2>
+   </element1>
+   <element1>
+       <element2> zone cliquable pour plier ou déplier les élements 3 </element2>
+       <element3> zones pliées ou dépliées </element3>
+       <element3> zones pliées ou dépliées </element3>
+       <element3> zones pliées ou dépliées </element3>
+   </element1>
+   <element1>
+       <element2> zone cliquable pour plier ou déplier les élements 3 </element2>
+       <element3> zones pliées ou dépliées </element3>
+       <element3> zones pliées ou dépliées </element3>
+       <element3> zones pliées ou dépliées </element3>
+   </element1>
+</element0>
+
+        les accordéons peuvent s'imbriquer.
+
+  Exemple :
+
+        <ul>
+        <li class="TBfr_ACCORDION_GROUP_JS">
+            <ul>
+                <li class="TBfr_ACCORDION_HIDE_ALL_JS"></li>
+                <li class="TBfr_ACCORDION_SHOW_ALL_JS"></li>
+            </ul>
+            <ul>
+                <li>TBfr_ACCORDION_HEADER</li>
+                <li>TBfr_ACCORDION_BODY</li>
+            </ul>
+            <ul>
+                <li>TBfr_ACCORDION_HEADER</li>
+                <li class="TBfr_ACCORDION_GROUP_JS">
+                    <ul>
+                        <li class="TBfr_ACCORDION_HIDE_ALL_JS"></li>
+                        <li class="TBfr_ACCORDION_SHOW_ALL_JS"></li>
+                    </ul>
+                    <ul>
+                        <li>TBfr_ACCORDION_HEADER</li>
+                        <li>TBfr_ACCORDION_BODY</li>
+                    </ul>
+                    <ul>
+                        <li>TBfr_ACCORDION_HEADER</li>
+                        <li>TBfr_ACCORDION_BODY</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="TBfr_ACCORDION_NOGROUP_JS">
+            <ul>
+                <li class="TBfr_ACCORDION_HIDE_ALL_JS"></li>
+                <li class="TBfr_ACCORDION_SHOW_ALL_JS"></li>
+            </ul>
+            <ul>
+                <li>TBfr_ACCORDION_HEADER</li>
+                <li>TBfr_ACCORDION_BODY</li>
+            </ul>
+            <ul>
+                <li>TBfr_ACCORDION_HEADER</li>
+                <li class="TBfr_ACCORDION_NOGROUP_JS">
+                    <ul>
+                        <li class="TBfr_ACCORDION_HIDE_ALL_JS">Hide</li>
+                        <li class="TBfr_ACCORDION_SHOW_ALL_JS">Show</li>
+                    </ul>
+                    <ul>
+                        <li>TBfr_ACCORDION_HEADER</li>
+                        <li>TBfr_ACCORDION_BODY</li>
+                    </ul>
+                    <ul>
+                        <li>TBfr_ACCORDION_HEADER</li>
+                        <li>TBfr_ACCORDION_BODY</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    li et ul peuvent être remplacés par n'importe quelles balises tant que les niveaux d'imbrication sont respectés.
+*/
+.TBfr_ACCORDION_NOGROUP_JS > *,
+.TBfr_ACCORDION_GROUP_JS > * {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: space-between;
+    /*-ms-justify-content: space-between;*/
+    -webkit-justify-content: space-between;
+}
+
+.TBfr_ACCORDION_HIDE_ALL_JS, .TBfr_ACCORDION_SHOW_ALL_JS {
+}

@@ -1,0 +1,32 @@
+﻿/*
+    .BHN-ACCORDION-GROUP, .BHN-ACCORDION-NOGROUP contienneNt une série de BHN-ACCORDION
+        dans BHN-ACCORDION-GROUP, un seul accordéon est déplié à la fois.
+        dans BHN-ACCORDION-NOGROUP, les accordéons sont indépendants.
+    .BHN-ACCORDION child de BHN-ACCORDION-GROUP OU -NOGROUP
+    contient :
+        .BHN-ACCORDION-HEADER : zone cliquable pour plier ou déplier l'accordéon, contenant un titre ou un résumé. child de BHN-ACCORDION
+        .BHN-ACCORDION-BODY : zone contenant le corps de l'accordéon, siblings de -HEADER, donc plusieurs -BODY possibles pour un -HEADER
+    .BHN-ACCORDION-HIDE-ALL, .BHN-ACCORDION-SHOW-ALL : zones cliquables pour replier ou déplier tous les accordéons. siblings de .BHN-ACCORDION
+        Ne fonctionnent qu'avec BHN-ACCORDION-NOGROUP
+
+*/
+.BHN-ACCORDION {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: space-between;
+    /*-ms-justify-content: space-between;*/
+    -webkit-justify-content: space-between;
+}
+
+.BHN-ACCORDION-HEADER {
+}
+
+.BHN-ACCORDION-BODY {
+}
+
+.BHN-ACCORDION-HIDE-ALL, .BHN-ACCORDION-SHOW-ALL {
+}

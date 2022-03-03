@@ -1,0 +1,42 @@
+﻿/* #BHN-SPY-MENU identifiant du menu spy scroll
+  .BHN-VERTICAL-SPY-MENU: spy menu vertical
+  .BHN-ROW-SPY-MENU : spy menu présenté en ligne
+
+    .BHN-SPY-MENU-ITEM : item de menu de type a
+    .BHN-SPY-MENU-ITEM-ACTIVE : item de menu correspondant à la page affichée
+
+*/
+.BHN-VERTICAL-SPY-MENU {
+    display: inline-flex;
+    display: -ms-inline-flexbox;
+    /*display: -webkit-inline-flex;*/
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+
+.BHN-ROW-SPY-MENU {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+}
+/*********************************/
+
+.BHN-SPY-MENU-ITEM {
+}
+
+a.BHN-SPY-MENU-ITEM:hover {
+}
+
+.BHN-VERTICAL-SPY-MENU .BHN-SPY-MENU-ITEM {
+    width: 100%
+}
+
+.BHN-SPY-MENU-ITEM-ACTIVE, a.BHN-SPY-MENU-ITEM-ACTIVE:HOVER {
+}

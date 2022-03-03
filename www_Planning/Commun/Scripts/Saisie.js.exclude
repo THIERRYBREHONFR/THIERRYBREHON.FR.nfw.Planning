@@ -1,0 +1,103 @@
+﻿//remplace le point par une virgule
+function replacePoint() {
+   var e = window.event;
+   var delimNbFlottant = ',';
+   //'.' a ete tapé, on le remplace par une ','
+   if(string.fromCharCode(e.keyCode)==".")
+      e.keyCode=delimNbFlottant.charCodeAt(0);
+}
+
+//remet la valeur par défaut
+function valeurParDefaut(valeur, zone) {
+   var e = window.event;
+   if(e.keyCode==8 && e.shiftKey)// || e.keyCode==68)
+   {
+      e.keyCode=0;
+      zone.value=valeur;
+   }
+}
+
+// remplace la touche return par tab et invalide le retour arrière
+function navigate() {
+   if (window.event.keyCode==13)
+   {
+      if (window.event.shiftKey) window.event.keyCode = 13;
+      else window.event.keyCode = 9;
+   }
+   else if (window.event.keyCode==8) window.event.keyCode = 0;
+}
+
+
+//!/!/!/!/!/!/ GESTION DES LISTES /!/!/!/!/!/!/
+
+function CopierCollerEntreListBox(listBoxOrigine,listBoxDestination) {
+   //copie dans une listbox destination les items sélectionnés dans une listbox origine, sans les y supprimer
+   for (var iOption=0; iOption < listBoxOrigine.options.length; ++iOption)
+   if ( listBoxOrigine.options[iOption].selected )
+      listBoxDestination.options[listBoxDestination.options.length] = new Option(listBoxOrigine.options[iOption].text,listBoxOrigine.options[iOption].value);
+   listBoxOrigine.selectedIndex=-1;
+}
+function CouperCollerEntreListBox(listBoxOrigine,listBoxDestination) {
+   //transfère dans une listbox destination les items sélectionnés d'une listbox origine
+   for(var iOption=0; iOption < listBoxOrigine.options.length; ++iOption)
+   if ( listBoxOrigine.options[iOption].selected )
+   {
+      listBoxDestination.options[listBoxDestination.options.length] = new Option(listBoxOrigine.options[iOption].text,listBoxOrigine.options[iOption].value);
+      listBoxOrigine.options[iOption] = null;
+   }
+   listBoxOrigine.selectedIndex=-1;
+}
+function CopierCollerEntreTextEtListBox(textBoxOrigine,listBoxDestination) {
+   //copie dans une listbox destination le texte saisi dans une textbox origine, sans l'y supprimer
+   if (textBoxOrigine.value!="")
+   listBoxDestination.options[listBoxDestination.options.length] = new Option(textBoxOrigine.value,"0");
+}
+function CouperCollerEntreTextEtListBox(textBoxOrigine,listBoxDestination){
+   //transfère dans une listbox destination le texte saisi dans une textbox origine
+   if (textBoxOrigine.value!="")
+      listBoxDestination.options[listBoxDestination.options.length] = new Option(textBoxOrigine.value,"0");
+   textBoxOrigine.value="";
+}
+function RetirerLesSelectionsEntreListBox(listBoxOrigine,listBoxDestination,comparerTextes){
+   // retire d'une listbox destination, les items sélectionnés dans une listbox origine, par comparaison de leurs id (par défaut), ou de leurs textes
+   if ( listBoxOrigine.selectedIndex != -1 )
+      for (var iOption=0; iOption < listBoxOrigine.options.length; ++iOption)
+   if ( listBoxOrigine.options[iOption].selected )
+      RetirerUneSelectionDeListBox( listBoxDestination, listBoxOrigine.options[iOption],comparerTextes);
+}
+function RetirerUneSelectionDeListBox(listBox, selection,comparerTextes) {
+   //retire une sélection d'une listbox, par comparaison des textes (plusieurs retraits possible donc)
+   for (var iOption=0; iOption < listBox.options.length; ++iOption)
+      if ((comparerTextes && listBox.options[iOption].text==selection.text )
+      || (!comparerTextes && listBox.options[iOption].value==selection.value ))
+         listBox.options[iOption] = null;
+}
+function RetirerLesSelectionsDeListBox(listBox,sauf0){
+   //retire d'une liste box, les items sélectionnés dans cette listbox, sauf éventuellement le premier (retire tout par défaut)
+   var iOption=0;
+   if (sauf0) iOption=1;
+   for(;iOption<listBox.options.length; )
+   if (listBox.options[iOption].selected) listBox.options[iOption] = null;
+   else iOption++;
+}
+function RetirerToutesLesSelectionsDeListBox(listBox,sauf0){
+   //retire d'une liste box, tous les items , sauf éventuellement le premier (retire tout par défaut)
+   var iOption=0;
+   if (sauf0) iOption=1;
+   for(;iOption<listBox.options.length; )
+   listBox.options[iOption] = null;
+}
+function PreparerListBox(listBox,retour,textes,separateur) {
+   // désectionne les items et concatène leurs ids (ou leurs textes) dans un hidden field
+   if (retour!=null) retour.value="";
+   for (var iOption=0; iOption < listBox.options.length; ++iOption) {
+      listBox.options[iOption].selected=false;
+      if (retour!=null) {
+         if (textes) retour.value+=listBox.options[iOption].text;
+         else retour.value+=listBox.options[iOption].value;
+         if (separateur!=null) retour.value+=separateur;
+         else retour.value+=";";
+      }
+   }
+}
+
