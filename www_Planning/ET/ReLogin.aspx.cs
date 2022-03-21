@@ -118,14 +118,15 @@ public partial class ReLogin : ETForm
         else
         {
             string VChemin;
-            if (PAppli.Valeur.IsStartingWith("TR")) VChemin = "TR/";
-            else if (PAppli.Valeur.IsStartingWith("CO")) VChemin = "CO/";
-            else if (PAppli.Valeur.IsStartingWith("CA")) VChemin = "CA/";
-            else if (PAppli.Valeur.IsStartingWith("PT")) VChemin = "PT/";
-            else if (PAppli.Valeur.IsStartingWith("ATR")) VChemin = "TR/";
-            else if (PAppli.Valeur.IsStartingWith("ACO")) VChemin = "CO/";
-            else if (PAppli.Valeur.IsStartingWith("ACA")) VChemin = "CA/";
-            else if (PAppli.Valeur.IsStartingWith("APT")) VChemin = "PT/";
+            if (PAppli.Valeur.IsStartingWith(false, "TR")) VChemin = "TR/";
+            else if (PAppli.Valeur.IsStartingWith(false, "CO")) VChemin = "CO/";
+            else if (PAppli.Valeur.IsStartingWith(false, "CA")) VChemin = "CA/";
+            else if (PAppli.Valeur.IsStartingWith(false, "PT")) VChemin = "PT/";
+            else if (PAppli.Valeur.IsStartingWith(false, "ATR")) VChemin = "TR/";
+            else if (PAppli.Valeur.IsStartingWith(false, "ACO")) VChemin = "CO/";
+            else if (PAppli.Valeur.IsStartingWith(false, "ACA")) VChemin = "CA/";
+            else if (PAppli.Valeur.IsStartingWith(false, "APT")) VChemin = "PT/";
+            else if (PAppli.Valeur.IsStartingWith(false, "APL")) VChemin = "PL/";
             else
             {
                 VChemin = "ET/";
